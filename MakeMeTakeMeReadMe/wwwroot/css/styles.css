@@ -36,7 +36,7 @@ p {
 }
 
 label {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .space {
@@ -48,7 +48,7 @@ label {
 }
 
 .theme-text {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 div#footer {
