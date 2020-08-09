@@ -17,7 +17,7 @@ namespace MakeMeTakeMeReadMe.Models
       }
     }
 
-    public void AddSnippet(string key, string text)
+    public void AddText(string key, string text)
     {
       _snippetList.Add(key, text);
     }
