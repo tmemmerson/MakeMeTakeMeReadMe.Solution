@@ -6,15 +6,32 @@
   </div>
   <div class="row">
     <div class="col-lg-6">
-      <p>@Model.GetSnippet("title")</p>
-      <p>@Model.GetSnippet("tagline")</p>
-      <p>@Model.GetSnippet("about")</p>
-      <p>@Model.GetSnippet("keyword1")</p>
-      <p>@Model.GetSnippet("keyword2")</p>
-      <p>@Model.GetSnippet("keyword3")</p>
-      <p>@Model.GetSnippet("keyword4")</p>
-      <p>@Model.GetSnippet("keyword5")</p>
-      <p>@Model.GetSnippet("keyword6")</p>
+      <p>@Model.GetSnippet("titleOpen")@Model.GetSnippet("title")@Model.GetSnippet("titleClose")</p>
+      <br>
+      <p>@Model.GetSnippet("taglineOpen")@Model.GetSnippet("tagline")@Model.GetSnippet("taglineClose")</p>
+      <br>
+      @Model.GetSnippet("heroOpen")@Model.GetSnippet("heroURL")@Model.GetSnippet("heroClose")
+      <br>
+      <p>@Model.GetSnippet("navigationBar")</p>
+      <br>
+      <p>@Model.GetSnippet("aboutOpen")@Model.GetSnippet("about")@Model.GetSnippet("aboutClose")</p>
+      <br>
+      <p>@Model.GetSnippet("bugOpen")@Model.GetSnippet("bugStatus")@Model.GetSnippet("bugMiddle")@Model.GetSnippet("bugDate")@Model.GetSnippet("bugClose")</p>
+      <br>
+      <p>@Model.GetSnippet("requirementSectionHeader")</p>
+      <br>
+      <p>@Model.GetSnippet("setupSectionHeader")</p>
+      <br>
+      <p>@Model.GetSnippet("qandcSectionHeader")</p>
+      <br>
+      <p>@Model.GetSnippet("technologiesSectionHeader")</p>
+      <br>
+      <p>@Model.GetSnippet("requirementSectionHeader")</p>
+      <br>
+      <p>@Model.GetSnippet("bugSectionHeader")</p>
+      <br>
+      <p>#@Model.GetSnippet("keyword1"), #@Model.GetSnippet("keyword2"), #@Model.GetSnippet("keyword3"), #@Model.GetSnippet("keyword4"), #@Model.GetSnippet("keyword5"), #@Model.GetSnippet("keyword6")</p>
+      <br>
     </div>
   </div>
   <div class="row">
