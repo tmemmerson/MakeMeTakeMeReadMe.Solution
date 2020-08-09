@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>MakeMeTakeMeReadMe</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='~/css/styles.css'>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1>MakeMeTakeMeReadMe</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <p>@Model.GetSnippet("title")</p>
+      <p>@Model.GetSnippet("tagline")</p>
+      <p>@Model.GetSnippet("about")</p>
+      <p>@Model.GetSnippet("keyword1")</p>
+      <p>@Model.GetSnippet("keyword2")</p>
+      <p>@Model.GetSnippet("keyword3")</p>
+      <p>@Model.GetSnippet("keyword4")</p>
+      <p>@Model.GetSnippet("keyword5")</p>
+      <p>@Model.GetSnippet("keyword6")</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center space">
+      <a href="/ReadmeOneInput" class="btn btn-info large">REMAKE</a> <a href="/" class="btn btn-info large">Home</a>
+    </div>
+  </div>
+</body>
+</html>
