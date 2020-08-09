@@ -1,0 +1,51 @@
+body {
+  background-image: url("https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/MakeMeTakeMeReadMe.Solution.jpg");
+  background-blend-mode: multiply;
+  background-color: #3D3A39;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.row {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 1vmax;
+  color: white;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.theme-img-top{
+  max-height: 280px;
+}
+
+label {
+  color: white;
+}
+
+.space {
+  margin-top: 200px;
+}
+
+.large {
+  font-size: 30px;
+}
+
+.theme-text {
+  color: black;
+}
