@@ -40,10 +40,13 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("bugClose", "_");
 
       readmeText.AddText("requirementSectionHeader", "## **✅REQUIREMENTS**");
+      
       readmeText.AddText("setupSectionHeader", "## **💻SETUP**");
+      readmeText.AddText("protectionSectionHeader", "## **🔧PROTECTING YOUR DATA**");
       readmeText.AddText("qandcSectionHeader", "## **📫QUESTIONS AND CONCERNS**");
       readmeText.AddText("technologiesSectionHeader", "## **🔧Technologies Used**");
       readmeText.AddText("bugSectionHeader", "## **🐛Known Bugs**");
+      
       readmeText.AddText("contributorsSectionHeader", "## **❤️Contributors**");
 
       readmeText.AddText("aboutOpen", "**<h3 align='center'>" );
