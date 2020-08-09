@@ -65,12 +65,16 @@ namespace MakeMeTakeMeReadMe.Controllers
     }
 
     [Route("/readmeTwoOutput")]
-    public ActionResult ReadmeTwoOutput(string text1)
+    public ActionResult ReadmeTwoOutput(string text1, bool Photoshop, bool Vscode, bool Mysqlworkbench)
     {
       Snippets readmeText = new Snippets();
       readmeText.AddText("text1", text1);
+      ViewBag.Photoshop = Photoshop;
+      ViewBag.Vscode = Vscode;
+      ViewBag.Mysqlworkbench = Mysqlworkbench;
       return View(readmeText);
     }
+
 
   }
 }

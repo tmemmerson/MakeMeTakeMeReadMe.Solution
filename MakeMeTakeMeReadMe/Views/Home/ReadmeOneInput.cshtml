@@ -1,6 +1,8 @@
 @{
   Layout = "_Layout";
 }
+@model MakeMeTakeMeReadMe.Models.Snippets
+
   <div class="container">
     <form action="/readmeOneOutput" method="post">
       <div class="row">
@@ -59,7 +61,16 @@
             <label for="bugDate">bug status date</label>
             <input class="form-control" id="bugDate" name="bugDate" type="text">
           </div>
-        </div>           
+        
+          @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+          <b>Want Additional Benefit: </b><br />
+          <span>| Photoshop: </span> @Html.CheckBox("Photoshop",true)
+          <span>| Vscode: </span> @Html.CheckBox("Vscode", false)
+          <span>| Mysqlworkbench: </span> @Html.CheckBox("Mysqlworkbench", false)    
+        }
+        </div>
+
       </div>
       <div class="row">
         <div class="col-md-1">
