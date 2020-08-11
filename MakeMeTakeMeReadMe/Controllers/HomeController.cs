@@ -16,7 +16,7 @@ namespace MakeMeTakeMeReadMe.Controllers
     public ActionResult ReadmeTwoInput() { return View(); }
 
     [Route("/readmeOneOutput")]
-    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate)
+    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool Photoshop, bool Mysqlworkbench, bool Vscode)
     {
       Snippets readmeText = new Snippets();
       readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
@@ -61,20 +61,16 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("keyword5", keyword5);
       readmeText.AddText("keyword6", keyword6);
 
-      return View(readmeText);
-    }
-
-    [Route("/readmeTwoOutput")]
-    public ActionResult ReadmeTwoOutput(string text1, bool Photoshop, bool Vscode, bool Mysqlworkbench)
-    {
-      Snippets readmeText = new Snippets();
-      readmeText.AddText("text1", text1);
       ViewBag.Photoshop = Photoshop;
       ViewBag.Vscode = Vscode;
       ViewBag.Mysqlworkbench = Mysqlworkbench;
       return View(readmeText);
     }
+      
+      
+    }
+    
 
 
   }
-}
+

@@ -69,6 +69,16 @@
           <span>| Vscode: </span> @Html.CheckBox("Vscode", false)
           <span>| Mysqlworkbench: </span> @Html.CheckBox("Mysqlworkbench", false)    
         }
+
+@*         @Html.Label("Technologies Used:")
+        @foreach (Course name in ViewBag.CourseId)
+        {
+          @Html.Label(name.Name)
+          @Html.CheckBox("CourseId", false, new { value = name.CourseId })
+        } *@
+
+
+        
         </div>
 
       </div>
