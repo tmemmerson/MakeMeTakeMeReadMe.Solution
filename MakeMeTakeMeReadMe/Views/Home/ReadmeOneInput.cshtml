@@ -61,24 +61,12 @@
             <label for="bugDate">bug status date</label>
             <input class="form-control" id="bugDate" name="bugDate" type="text">
           </div>
-        
-          @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-        {
-          <b>Technologies Used: </b><br />
-          <span>| Photoshop: </span> @Html.CheckBox("Photoshop",false)
-          <span>| Vscode: </span> @Html.CheckBox("Vscode", false)
-          <span>| Mysqlworkbench: </span> @Html.CheckBox("Mysqlworkbench", false)    
-        }
-
-@*         @Html.Label("Technologies Used:")
-        @foreach (Course name in ViewBag.CourseId)
-        {
-          @Html.Label(name.Name)
-          @Html.CheckBox("CourseId", false, new { value = name.CourseId })
-        } *@
-
-
-        
+          <div class="form-group">
+            <b>Technologies Used: </b><br />
+            <span>| Photoshop: </span> @Html.CheckBox("Photoshop",false)
+            <span>| Vscode: </span> @Html.CheckBox("Vscode", false)
+            <span>| Mysqlworkbench: </span> @Html.CheckBox("Mysqlworkbench", false)    
+          </div>
         </div>
 
       </div>
