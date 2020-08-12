@@ -61,11 +61,12 @@
             <label for="bugDate">bug status date</label>
             <input class="form-control" id="bugDate" name="bugDate" type="text">
           </div>
+
           <div class="form-group">
             <b>Technologies Used: </b><br />
-            <span>| Photoshop: </span> @Html.CheckBox("Photoshop",false)
-            <span>| Vscode: </span> @Html.CheckBox("Vscode", false)
-            <span>| Mysqlworkbench: </span> @Html.CheckBox("Mysqlworkbench", false)    
+            <span>| Photoshop: </span><input type="checkbox" name="Photoshop" value="true">
+            <span>| Vscode: </span><input type="checkbox" name="Vscode" value="true">
+            <span>| Mysqlworkbench:<input type="checkbox" name="Mysqlworkbench" value="true">    
           </div>
         </div>
 

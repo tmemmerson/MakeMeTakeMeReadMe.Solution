@@ -6,9 +6,14 @@ namespace MakeMeTakeMeReadMe.Models
   public class Snippets
   {
     private Dictionary<string, string> _snippetList = new Dictionary<string, string>();
-    public bool Photoshop { get; set; }
-    public bool Vscode { get; set; }
-    public bool Mysqlworkbench { get; set; }
+    public bool usesPhotoshop { get; set; }
+    public bool usesMysql { get; set; }
+    public bool usesMysql { get; set; }
+
+    public bool usesMysql { get; set; }
+    public bool usesMysql { get; set; }
+    public bool usesMysql { get; set; }
+
 
     public string GetSnippet(string key)
     {

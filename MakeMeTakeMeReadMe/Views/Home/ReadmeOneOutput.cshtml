@@ -1,8 +1,10 @@
 @{
   Layout = "_Layout";
 }
+
   <div class="jumbotron">
     <h1>MakeMeTakeMeReadMe</h1>
+
   </div>
   <div class="row">
     <div class="col-lg-6">
@@ -32,7 +34,6 @@
       <br>
       <p>@Model.GetSnippet("bugSectionHeader")</p>
       <br>
-
       <p>@Model.GetSnippet("bugOpen")@Model.GetSnippet("bugStatus")@Model.GetSnippet("bugMiddle")@Model.GetSnippet("bugDate")@Model.GetSnippet("bugClose")</p>
       <br>
       <p>@Model.GetSnippet("contributorsSectionHeader")</p>
@@ -41,6 +42,27 @@
       <br>
       <p>#@Model.GetSnippet("keyword1"), #@Model.GetSnippet("keyword2"), #@Model.GetSnippet("keyword3"), #@Model.GetSnippet("keyword4"), #@Model.GetSnippet("keyword5"), #@Model.GetSnippet("keyword6")</p>
       <br>
+      @if (ViewBag.usesPhotoshop)
+      {
+        <p>"uses photoshop"</p>
+      }
+      @if (ViewBag.usesVscode)
+      {
+        <p>"uses vscode"</p>
+      }
+      @if (ViewBag.usesMysql)
+      {
+        <p>"uses workbench"</p>
+      }
+      @if (ViewBag.requiresGit)
+      {
+        <p>"requires git"</p>
+      }
+      @if (ViewBag.requiresDotnet)
+      {
+        <p>"requires dotnet"</p>
+      }
+
     </div>
   </div>
   <div class="row">
