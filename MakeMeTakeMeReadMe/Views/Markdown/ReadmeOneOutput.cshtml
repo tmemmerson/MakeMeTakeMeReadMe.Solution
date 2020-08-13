@@ -1,0 +1,65 @@
+@{
+  Layout = "_Layout";
+}
+
+  <div class="jumbotron">
+    <h1>MakeMeTakeMeReadMe</h1>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <p>@Model.SectionHeaders("titleOpen")@Model.SectionHeaders("title")@Model.SectionHeaders("titleClose")</p>
+      <br>
+      <p>@Model.SectionHeaders("taglineOpen")@Model.SectionHeaders("tagline")@Model.SectionHeaders("taglineClose")</p>
+      <br>
+      @Model.SectionHeaders("heroOpen")@Model.SectionHeaders("heroURL")@Model.SectionHeaders("heroClose")
+      <br>
+      <p>@Model.SectionHeaders("navigationBar")</p>
+      <br>
+
+      <p>@Model.SectionHeaders("aboutOpen")@Model.SectionHeaders("about")@Model.SectionHeaders("aboutClose")</p>
+      <br>
+
+      <p>@Model.SectionHeaders("requirementSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("protectionSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("setupSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("qandcSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("requirementSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("bugSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("bugOpen")@Model.SectionHeaders("bugStatus")@Model.SectionHeaders("bugMiddle")@Model.SectionHeaders("bugDate")@Model.SectionHeaders("bugClose")</p>
+      <br>
+      <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
+      <br>
+      <p>@Model.SectionHeaders("contributorStartMarkdown")</p>
+      <br>
+      <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
+      <br>
+      @if (ViewBag.usesPhotoshop)
+      {
+        <p>"uses photoshop"</p>
+      }
+      @if (ViewBag.usesVscode)
+      {
+        <p>"uses vscode"</p>
+      }
+      @if (ViewBag.usesMysql)
+      {
+        <p>"uses workbench"</p>
+      }
+
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center space">
+      <a href="/ReadmeOneInput" class="btn btn-info large">REMAKE</a> <a href="/" class="btn btn-info large">Home</a>
+    </div>
+  </div>

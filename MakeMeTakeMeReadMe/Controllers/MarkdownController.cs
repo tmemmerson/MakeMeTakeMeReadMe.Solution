@@ -3,7 +3,7 @@ using MakeMeTakeMeReadMe.Models;
 
 namespace MakeMeTakeMeReadMe.Controllers
 {
-  public class HomeController : Controller
+  public class MarkdownController : Controller
   {
 
     [Route("/")]
@@ -16,9 +16,9 @@ namespace MakeMeTakeMeReadMe.Controllers
     public ActionResult ReadmeTwoInput() { return View(); }
 
     [Route("/readmeOneOutput")]
-    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool Photoshop, bool Mysqlworkbench, bool Vscode)
+    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql)
     {
-      Snippets readmeText = new Snippets();
+      Markdown readmeText = new Markdown();
       readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
       readmeText.AddText("title", title);
       readmeText.AddText("titleClose", "**");
@@ -31,14 +31,14 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("heroURL", heroURL);
       readmeText.AddText("heroClose", "'>" );
 
-      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#✅requirements'>Requirements</a> •<a href='#💻setup'>Setup</a> •<a href='#🔧protecting-your-data'>Protecting Data<a> •<a href='#📫questions-and-concerns'>Q's & C's</a> •<a href='#🔧technologies-used'>Technologies</a> •<a href='#🐛bugs'>Bugs</a> •<a href='#❤️contributors'>Contributors</a>");
+      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#requirements'>Requirements</a> •<a href='#💻setup'>Setup</a> •<a href='#🔧protecting-your-data'>Protecting Data<a> •<a href='#questions-and-concerns'>Q's & C's</a> •<a href='#technologies-used'>Technologies</a> •<a href='#bugs'>Bugs</a> •<a href='#contributors'>Contributors</a>");
       
-      readmeText.AddText("requirementSectionHeader", "## **✅REQUIREMENTS**");
+      readmeText.AddText("requirementSectionHeader", "## **REQUIREMENTS**");
       
-      readmeText.AddText("setupSectionHeader", "## **💻SETUP**");
-      readmeText.AddText("protectionSectionHeader", "## **🔧PROTECTING YOUR DATA**");
-      readmeText.AddText("qandcSectionHeader", "## **📫QUESTIONS AND CONCERNS**");
-      readmeText.AddText("technologiesSectionHeader", "## **🔧Technologies Used**");
+      readmeText.AddText("setupSectionHeader", "## **SETUP**");
+      readmeText.AddText("protectionSectionHeader", "## **PROTECTING YOUR DATA**");
+      readmeText.AddText("qandcSectionHeader", "## **QUESTIONS AND CONCERNS**");
+      readmeText.AddText("technologiesSectionHeader", "## **Technologies Used**");
 
       readmeText.AddText("aboutOpen", "**<h3 align='center'>" );
       readmeText.AddText("about", about);
@@ -61,9 +61,9 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("keyword5", keyword5);
       readmeText.AddText("keyword6", keyword6);
 
-      ViewBag.Photoshop = Photoshop;
-      ViewBag.Vscode = Vscode;
-      ViewBag.Mysqlworkbench = Mysqlworkbench;
+      ViewBag.usesPhotoshop = usesPhotoshop;
+      ViewBag.usesVscode = usesVscode;
+      ViewBag.usesMysql = usesMysql;
       return View(readmeText);
     }
       
