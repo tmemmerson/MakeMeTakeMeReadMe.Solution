@@ -31,7 +31,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("heroURL", heroURL);
       readmeText.AddText("heroClose", "'>" );
 
-      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#requirements'>Requirements</a> •<a href='#💻setup'>Setup</a> •<a href='#🔧protecting-your-data'>Protecting Data<a> •<a href='#questions-and-concerns'>Q's & C's</a> •<a href='#technologies-used'>Technologies</a> •<a href='#bugs'>Bugs</a> •<a href='#contributors'>Contributors</a>");
+      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#protecting-your-data'>Protecting Data<a> •<a href='#questions-and-concerns'>Q's & C's</a> •<a href='#technologies-used'>Technologies</a> •<a href='#bugs'>Bugs</a> •<a href='#contributors'>Contributors</a>");
       
       readmeText.AddText("requirementSectionHeader", "## **REQUIREMENTS**");
       
@@ -44,7 +44,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("about", about);
       readmeText.AddText("aboutClose", "</h3>**");
       
-      readmeText.AddText("bugSectionHeader", "## **🐛Known Bugs**");
+      readmeText.AddText("bugSectionHeader", "## **Known Bugs**");
       readmeText.AddText("bugStatus", bugStatus);
       readmeText.AddText("bugOpen", "_**" );
       readmeText.AddText("bugMiddle", " as of:** ");
