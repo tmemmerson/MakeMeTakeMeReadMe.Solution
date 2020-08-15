@@ -37,7 +37,6 @@ namespace MakeMeTakeMeReadMe.Controllers
       
       readmeText.AddText("setupSectionHeader", "## **SETUP**");
       readmeText.AddText("protectionSectionHeader", "## **PROTECTING YOUR DATA**");
-      readmeText.AddText("qandcSectionHeader", "## **QUESTIONS AND CONCERNS**");
       readmeText.AddText("technologiesSectionHeader", "## **Technologies Used**");
 
       readmeText.AddText("aboutOpen", "**<h3 align='center'>" );
