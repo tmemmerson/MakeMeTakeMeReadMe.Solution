@@ -42,18 +42,9 @@
       <br>
       <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
       <br>
-      @if (ViewBag.usesPhotoshop)
-      {
-        <p>"uses photoshop"</p>
-      }
-      @if (ViewBag.usesVscode)
-      {
-        <p>"uses vscode"</p>
-      }
-      @if (ViewBag.usesMysql)
-      {
-        <p>"uses workbench"</p>
-      }
+      @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
+      @if (ViewBag.usesVscode){<p>"uses vscode"</p>}
+      @if (ViewBag.usesMysql){<p>"uses workbench"</p>}
 
 
     </div>
