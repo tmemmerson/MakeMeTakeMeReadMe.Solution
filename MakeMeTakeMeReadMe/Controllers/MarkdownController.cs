@@ -16,9 +16,30 @@ namespace MakeMeTakeMeReadMe.Controllers
     public ActionResult ReadmeTwoInput() { return View(); }
 
     [Route("/readmeOneOutput")]
-    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey)
+    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav)
     {
       Markdown readmeText = new Markdown();
+      readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
+      readmeText.AddText("title", title);
+      readmeText.AddText("titleClose", "**");
+
+      readmeText.AddText("heroOpen", "<h1 align='center'><img width='900' height='450' src='");
+      readmeText.AddText("heroURL", heroURL);
+      readmeText.AddText("heroClose", "'><br>" );
+
+      
+      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#technologies-used'>Technologies</a> •<a href='#contributors'>Contributors</a>");
+      readmeText.AddText("navClose", "</h3>");
+
+      readmeText.AddText("hasProtectingDataNav", "•<a href='#protecting-your-data'>Protecting Data</a>");
+      readmeText.AddText("hasBugStatusNav", "•<a href='#bugs'>Bugs</a>");
+      
+      readmeText.AddText("aboutOpen", "<h3 align='center'>" );
+      readmeText.AddText("about", about);
+      readmeText.AddText("aboutClose", "</h3>");
+
+      readmeText.AddText("contributorsSectionHeader", "## **❤️Contributors**");
+      readmeText.AddText("requirementSectionHeader", "## **REQUIREMENTS**");
       readmeText.AddText("contributorAllisonSadin", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/allison-sadin.jpeg' width='160px;'/><br /><sub><b>Allison Sadin</b></sub>](https://www.linkedin.com/in/allison-sadin-pdx/)<br />");
       readmeText.AddText("contributorBenWhite", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/ben-white.jpeg' width='160px;'/><br /><sub><b>Ben White</b></sub>](https://www.linkedin.com/in/ben-m-white/)<br />");
       readmeText.AddText("contributorBenRussell", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/ben-russell.jpeg' width='160px;'/><br /><sub><b>Ben Russell</b></sub>](https://www.linkedin.com/in/ben-russell36/)<br />");
@@ -57,15 +78,14 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("contributorTristanEmmerson", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/tristan-emmerson.jpeg' width='160px;'/><br /><sub><b>Tristan Emmerson</b></sub>](https://www.linkedin.com/in/tristan-emmerson/)<br />");
       readmeText.AddText("contributorTysonLackey", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/tyson-lackey.jpeg' width='160px;'/><br /><sub><b>Tyson Lackey</b></sub>](https://www.linkedin.com/in/tyson-lackey/)<br />");
       
-      readmeText.AddText("contributorsSectionHeader", "## **❤️Contributors**");
-      readmeText.AddText("requirementSectionHeader", "## **REQUIREMENTS**");
+      
       readmeText.AddText("setupSectionHeader", "## **SETUP**");
       readmeText.AddText("protectionSectionHeader", "## **PROTECTING YOUR DATA**");
       readmeText.AddText("technologiesSectionHeader", "## **Technologies Used**");
       readmeText.AddText("bugSectionHeader", "## **Known Bugs**");
 
-      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#protecting-your-data'>Protecting Data<a> •<a href='#questions-and-concerns'>Q's & C's</a> •<a href='#technologies-used'>Technologies</a> •<a href='#bugs'>Bugs</a> •<a href='#contributors'>Contributors</a>");
-
+      
+      
       readmeText.AddText("keyword1", keyword1);
       readmeText.AddText("keyword2", keyword2);
       readmeText.AddText("keyword3", keyword3);
@@ -73,28 +93,23 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("keyword5", keyword5);
       readmeText.AddText("keyword6", keyword6);
 
-      readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
-      readmeText.AddText("title", title);
-      readmeText.AddText("titleClose", "**");
+      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
+      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
+      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
 
       readmeText.AddText("taglineOpen", "*<h2 align ='center'>");
       readmeText.AddText("tagline", tagline);
       readmeText.AddText("taglineClose", "*");
       
-      readmeText.AddText("heroOpen", "<h1 align='center'><img width='900' height='450' src='");
-      readmeText.AddText("heroURL", heroURL);
-      readmeText.AddText("heroClose", "'>" );
 
-      readmeText.AddText("aboutOpen", "**<h3 align='center'>" );
-      readmeText.AddText("about", about);
-      readmeText.AddText("aboutClose", "</h3>**");
       
       readmeText.AddText("bugStatus", bugStatus);
       readmeText.AddText("bugOpen", "_**" );
       readmeText.AddText("bugMiddle", " as of:** ");
       readmeText.AddText("bugDate", bugDate);
       readmeText.AddText("bugClose", "_");
-
+      ViewBag.hasProtectingDataNav = hasProtectingDataNav;
+      ViewBag.hasBugStatusNav = hasBugStatusNav;
       ViewBag.usesPhotoshop = usesPhotoshop;
       ViewBag.usesVscode = usesVscode;
       ViewBag.usesMysql = usesMysql;

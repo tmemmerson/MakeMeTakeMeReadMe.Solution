@@ -8,28 +8,33 @@
   </div>
   <div class="row">
     <div class="col-lg-6">
+      <p>@Model.SectionHeaders("heroOpen")@Model.SectionHeaders("heroURL")@Model.SectionHeaders("heroClose")</p>
+      <br>
       <p>@Model.SectionHeaders("titleOpen")@Model.SectionHeaders("title")@Model.SectionHeaders("titleClose")</p>
       <br>
       <p>@Model.SectionHeaders("taglineOpen")@Model.SectionHeaders("tagline")@Model.SectionHeaders("taglineClose")</p>
       <br>
-      @Model.SectionHeaders("heroOpen")@Model.SectionHeaders("heroURL")@Model.SectionHeaders("heroClose")
+      <p>@Model.SectionHeaders("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.SectionHeaders("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.SectionHeaders("hasProtectingDataNav")}@Model.SectionHeaders("navClose")</p>
       <br>
-      <p>@Model.SectionHeaders("navigationBar")</p>
-      <br>
-
       <p>@Model.SectionHeaders("aboutOpen")@Model.SectionHeaders("about")@Model.SectionHeaders("aboutClose")</p>
       <br>
-
       <p>@Model.SectionHeaders("requirementSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("protectionSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("setupSectionHeader")</p>
       <br>
-      <p>@Model.SectionHeaders("qandcSectionHeader")</p>
-      <br>
       <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
+      
+        @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("usesPhotoshopSnippet")</p>}
+        @if (ViewBag.usesVscode){<p>@Model.SectionHeaders("usesVscodeSnippet")</p>}
+        @if (ViewBag.usesMysql){<p>@Model.SectionHeaders("usesMysqlSnippet")</p>}
+
+      
       <br>
+      
+      <br>
+    
       <p>@Model.SectionHeaders("requirementSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("bugSectionHeader")</p>
@@ -38,13 +43,7 @@
       <br>
       <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
       <br>
-      <p>@Model.SectionHeaders("contributorStartMarkdown")</p>
-      <br>
-      <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
-      <br>
-      @if (ViewBag.usesPhotoshop){<p>"uses photoshop"</p>}
-      @if (ViewBag.usesVscode){<p>"uses vscode"</p>}
-      @if (ViewBag.usesMysql){<p>"uses workbench"</p>}
+      
       @if (ViewBag.hasAllisonSadin){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
       @if (ViewBag.hasBenWhite){<p>@Model.SectionHeaders("contributorBenWhite")</p>}
       @if (ViewBag.hasBenRussell){<p>@Model.SectionHeaders("contributorBenRussell")</p>}
@@ -82,7 +81,9 @@
       @if (ViewBag.hasThomasGlenn){<p>@Model.SectionHeaders("contributorThomasGlenn")</p>}
       @if (ViewBag.hasTristanEmmerson){<p>@Model.SectionHeaders("contributorTristanEmmerson")</p>}
       @if (ViewBag.hasTysonLackey){<p>@Model.SectionHeaders("contributorTysonLackey")</p>}
-
+      
+      <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
+    
     </div>
   </div>
   <div class="row">
