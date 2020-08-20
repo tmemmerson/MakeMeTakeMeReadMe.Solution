@@ -25,8 +25,18 @@
       <p>@Model.SectionHeaders("setupSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
-      
+
         @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("usesPhotoshopSnippet")</p>}
+        @if (ViewBag.usesCsharp){<p>@Model.SectionHeaders("usesCsharpSnippet")</p>}
+        @if (ViewBag.usesJavascript){<p>@Model.SectionHeaders("usesJavascriptSnippet")</p>}
+        @if (ViewBag.usesCss){<p>@Model.SectionHeaders("usesCssSnippet")</p>}
+        @if (ViewBag.usesBootstrap){<p>@Model.SectionHeaders("usesBootstrapSnippet")</p>}
+        @if (ViewBag.usesSwagger){<p>@Model.SectionHeaders("usesSwaggerSnippet")</p>}
+        @if (ViewBag.usesAspDotnetMvc){<p>@Model.SectionHeaders("usesAspDotnetMvcSnippet")</p>}
+        @if (ViewBag.usesHtml){<p>@Model.SectionHeaders("usesHtmlSnippet")</p>}
+        @if (ViewBag.usesNodeJs){<p>@Model.SectionHeaders("usesNodeJsSnippet")</p>}
+        @if (ViewBag.usesWebpack){<p>@Model.SectionHeaders("usesWebpackSnippet")</p>}
+        @if (ViewBag.usesJquery){<p>@Model.SectionHeaders("usesJquerySnippet")</p>}
         @if (ViewBag.usesVscode){<p>@Model.SectionHeaders("usesVscodeSnippet")</p>}
         @if (ViewBag.usesMysql){<p>@Model.SectionHeaders("usesMysqlSnippet")</p>}
       <br>

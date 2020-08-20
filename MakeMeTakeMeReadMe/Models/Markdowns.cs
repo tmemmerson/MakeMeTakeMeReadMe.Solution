@@ -48,6 +48,16 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasSpecsSection { get; set; }
     public bool hasLicenseMit { get; set; }
     public bool hasSection { get; set; }
+    public bool usesJavascript { get; set; }
+    public bool usesCss { get; set; }
+    public bool usesBootstrap { get; set; }
+    public bool usesCsharp { get; set; }
+    public bool usesSwagger { get; set; }
+    public bool usesAspDotnetMvc { get; set; }
+    public bool usesHtml { get; set; }
+    public bool usesNodeJs { get; set; }
+    public bool usesWebpack { get; set; }
+    public bool usesJquery { get; set; }
     public bool usesPhotoshop { get; set; }
     public bool usesMysql { get; set; }
     public bool usesVscode { get; set; }
