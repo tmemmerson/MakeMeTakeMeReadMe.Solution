@@ -1,0 +1,5 @@
+implement the requires section fully
+get list of hosted stock images
+write the readme
+SETUP create a setup option for db
+SETUP create a dotnet restore/dotnet build/dotnet watch run for setup
