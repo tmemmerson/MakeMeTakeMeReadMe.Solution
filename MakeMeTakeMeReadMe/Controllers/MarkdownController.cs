@@ -39,45 +39,44 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("navigationBar", "<h3 align ='center'><a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#technologies-used'>Technologies</a> •<a href='#❤️contributors'>Contributors</a>");
       readmeText.AddText("navClose", "</h3>");
 
-      //optional section nav elements
-      readmeText.AddText("hasProtectingDataNav", "•<a href='#protecting-your-data'>Protecting Data</a>");
-      readmeText.AddText("hasBugStatusNav", "•<a href='#known-bugs'>Bugs</a>");
-      readmeText.AddText("hasCloningDataNav", "•<a href='#cloning'>Cloning</a>");
-    
       //about
       readmeText.AddText("aboutOpen", "<h3 align='center'>" );
       readmeText.AddText("about", about);
       readmeText.AddText("aboutClose", "</h3>");      
       
       //section headers
-      readmeText.AddText("contributorsSectionHeader", "## **❤️Contributors**");
-      readmeText.AddText("requirementSectionHeader", "## **REQUIREMENTS**");
-      readmeText.AddText("technologiesSectionHeader", "## **TECHNOLOGIES USED**");
-    
+      readmeText.AddText("contributorsSectionHeader", "# **❤️Contributors**");
+      readmeText.AddText("requirementSectionHeader", "# **REQUIREMENTS**");
+      readmeText.AddText("technologiesSectionHeader", "# **TECHNOLOGIES USED**");
       
-      
-      //keywords
-      readmeText.AddText("keyword1", keyword1);
-      readmeText.AddText("keyword2", keyword2);
-      readmeText.AddText("keyword3", keyword3);
-      readmeText.AddText("keyword4", keyword4);
-      readmeText.AddText("keyword5", keyword5);
-      readmeText.AddText("keyword6", keyword6);
+      //optional specifications section
+      readmeText.AddText("specificationsSectionHeader", "# **SPECIFICATIONS**");
+      readmeText.AddText("hasSpecificationDataNav", "•<a href='#specifications'>Specs</a>");
       
       //SETUP OVER-ARCHING PARENT HEADER//
-      readmeText.AddText("setupSectionHeader", "## **SETUP**");
+      readmeText.AddText("setupSectionHeader", "# **SETUP**");
 
       //OPTIONAL: cloning section
       ViewBag.hasCloningDataNav = hasCloningDataNav;
-      //FIX/FINISH THIS!!!!!
+      readmeText.AddText("hasCloningDataNav", "•<a href='#cloning'>Cloning</a>");
       readmeText.AddText("cloningSectionHeader", "## **CLONING**");
+      readmeText.AddText("cloningTutorial1", "* Copy the repo link as shown in the image below");
+      readmeText.AddText("cloningTutorial2", "![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone.gif 'How to clone repo')");
+      readmeText.AddText("cloningTutorial3", "* Paste the link in the field provided by VsCode as thown in the image below");
+      readmeText.AddText("cloningTutorial4", "* You will be prompted to open the directory once you have cloned it. Select 'open'");
+      readmeText.AddText("cloningTutorial5", "![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone-github2.gif 'Cloning from Github within VSCode')");
 
       //OPTIONAL: protecting data section
       ViewBag.hasProtectingDataNav = hasProtectingDataNav;
+      readmeText.AddText("hasProtectingDataNav", "•<a href='#protecting-your-data'>Protecting Data</a>");
       readmeText.AddText("protectionSectionHeader", "## **PROTECTING YOUR DATA**");
-      
+      readmeText.AddText("protectionTutorial1", "* Step 1: create a .gitignore file in the top level of your project directory. populate the file as shown in step 1 of the image below.");
+      readmeText.AddText("protectionTutorial2", "* Step 2: commit that .gitignore file (this prevents your sensitive information like your API key being shown to others). **DO NOT PROCEED UNTIL YOU DO THIS!**");
+      readmeText.AddText("protectionTutorial3", "![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/readme-image-3.jpg 'Set up instructions')");
+
       //OPTIONAL: bug section
       ViewBag.hasBugStatusNav = hasBugStatusNav;
+      readmeText.AddText("hasBugStatusNav", "•<a href='#known-bugs'>Bugs</a>");
       readmeText.AddText("bugSectionHeader", "## **KNOWN BUGS**");
       readmeText.AddText("bugStatus", bugStatus);
       readmeText.AddText("bugOpen", "_**" );
@@ -85,22 +84,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("bugDate", bugDate);
       readmeText.AddText("bugClose", "_");
       
-      //technologies used
-      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
-      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
-      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
-      readmeText.AddText("usesCssSnippet", "_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_");
-      readmeText.AddText("usesJavascriptSnippet", "_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_");
-      readmeText.AddText("usesCsharpSnippet", "_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_");
-      readmeText.AddText("usesBootstrapSnippet", "_[Bootstrap](https://getbootstrap.com/)_");
-      readmeText.AddText("usesSwaggerSnippet", "_[Swagger](https://swagger.io/)_");
-      readmeText.AddText("usesAspDotnetMvcSnippet", "_[Asp.Net MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)_");
-      readmeText.AddText("usesHtmlSnippet", "_[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)_");
-      readmeText.AddText("usesNodeJsSnippet", "_[Node.js](https://nodejs.org/en/)_");
-      readmeText.AddText("usesWebpackSnippet", "_[Webpack](https://webpack.js.org/)_");
-      readmeText.AddText("usesJquerySnippet", "_[Jquery](https://jquery.com/)_");
-
-      //technologies used
+      //OPTIONAL technologies used
       ViewBag.usesCss = usesCss;
       ViewBag.usesJavascript = usesJavascript;
       ViewBag.usesCsharp = usesCsharp;
@@ -114,6 +98,19 @@ namespace MakeMeTakeMeReadMe.Controllers
       ViewBag.usesNodeJs = usesNodeJs;
       ViewBag.usesWebpack = usesWebpack;
       ViewBag.usesJquery = usesJquery;
+      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
+      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
+      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
+      readmeText.AddText("usesCssSnippet", "_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_");
+      readmeText.AddText("usesJavascriptSnippet", "_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_");
+      readmeText.AddText("usesCsharpSnippet", "_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_");
+      readmeText.AddText("usesBootstrapSnippet", "_[Bootstrap](https://getbootstrap.com/)_");
+      readmeText.AddText("usesSwaggerSnippet", "_[Swagger](https://swagger.io/)_");
+      readmeText.AddText("usesAspDotnetMvcSnippet", "_[Asp.Net MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)_");
+      readmeText.AddText("usesHtmlSnippet", "_[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)_");
+      readmeText.AddText("usesNodeJsSnippet", "_[Node.js](https://nodejs.org/en/)_");
+      readmeText.AddText("usesWebpackSnippet", "_[Webpack](https://webpack.js.org/)_");
+      readmeText.AddText("usesJquerySnippet", "_[Jquery](https://jquery.com/)_");
 
       //contributors
       readmeText.AddText("contributorAllisonSadin", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/allison-sadin.jpeg' width='160px;'/><br /><sub><b>Allison Sadin</b></sub>](https://www.linkedin.com/in/allison-sadin-pdx/)<br />");
@@ -193,6 +190,19 @@ namespace MakeMeTakeMeReadMe.Controllers
       ViewBag.hasTristanEmmerson = hasTristanEmmerson;
       ViewBag.hasTysonLackey = hasTysonLackey;
       
+      //keywords
+      readmeText.AddText("keyword1", keyword1);
+      readmeText.AddText("keyword2", keyword2);
+      readmeText.AddText("keyword3", keyword3);
+      readmeText.AddText("keyword4", keyword4);
+      readmeText.AddText("keyword5", keyword5);
+      readmeText.AddText("keyword6", keyword6);
+
+      //license
+      readmeText.AddText("mitHeader", "## **License**");
+      readmeText.AddText("mitLicense1", "![alt text][logo]");
+      readmeText.AddText("mitLicense2", "[logo]: https://img.shields.io/bower/l/bootstrap 'MIT License'");
+
       return View(readmeText);
     }
     }

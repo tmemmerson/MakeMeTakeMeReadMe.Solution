@@ -20,12 +20,28 @@
       <br>
       <p>@Model.SectionHeaders("requirementSectionHeader")</p>
       <br>
-      <p>@Model.SectionHeaders("protectionSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("setupSectionHeader")</p>
       <br>
-      <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
+      @if (ViewBag.hasCloningDataNav){
+      <p>@Model.SectionHeaders("cloningSectionHeader")</p>
+      <p>@Model.SectionHeaders("cloningTutorial1")</p>
+      <p>@Model.SectionHeaders("cloningTutorial2")</p>  
+      <p>@Model.SectionHeaders("cloningTutorial3")</p>
+      <p>@Model.SectionHeaders("cloningTutorial4")</p>
+      <p>@Model.SectionHeaders("cloningTutorial5")</p>    
+      <br>
+      }
 
+      @if (ViewBag.hasProtectingDataNav){
+      <p>@Model.SectionHeaders("protectionSectionHeader")</p>
+      <p>@Model.SectionHeaders("protectionTutorial1")</p>
+      <p>@Model.SectionHeaders("protectionTutorial2")</p>  
+      <p>@Model.SectionHeaders("protectionTutorial3")</p>
+      <br>
+      }
+
+      <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
         @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("usesPhotoshopSnippet")</p>}
         @if (ViewBag.usesCsharp){<p>@Model.SectionHeaders("usesCsharpSnippet")</p>}
         @if (ViewBag.usesJavascript){<p>@Model.SectionHeaders("usesJavascriptSnippet")</p>}
@@ -48,10 +64,6 @@
       <br>
       }
 
-      @if (ViewBag.hasCloningDataNav){
-      <p>@Model.SectionHeaders("cloningSectionHeader")</p>
-      <br>
-      }
       <br>
       <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
       @if (ViewBag.hasAllisonSadin){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
@@ -93,7 +105,8 @@
       @if (ViewBag.hasTysonLackey){<p>@Model.SectionHeaders("contributorTysonLackey")</p>}
       
       <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
-    
+      <p>@Model.SectionHeaders("mitLicense1")</p>
+      <p>@Model.SectionHeaders("mitLicense2")</p>
     </div>
   </div>
   <div class="row">

@@ -64,6 +64,9 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasBugStatusNav { get; set; }
     public bool hasProtectingDataNav { get; set; }
     public bool hasCloningDataNav { get; set; }
+    public bool requiresVscode { get; set; } //not implemented
+    public bool requiresMysql { get; set; } //not implemented
+  
     public string SectionHeaders(string key)
     {
       if (_markdownSnippetList.ContainsKey(key))
