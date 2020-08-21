@@ -16,30 +16,106 @@ namespace MakeMeTakeMeReadMe.Controllers
     public ActionResult ReadmeTwoInput() { return View(); }
 
     [Route("/readmeOneOutput")]
-    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav,bool usesJquery, bool usesWebpack, bool usesNodeJs, bool usesHtml, bool usesAspDotnetMvc, bool usesSwagger, bool usesBootstrap, bool usesCss, bool usesJavascript, bool usesCsharp)
+    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav, bool hasCloningDataNav, bool usesJquery, bool usesWebpack, bool usesNodeJs, bool usesHtml, bool usesAspDotnetMvc, bool usesSwagger, bool usesBootstrap, bool usesCss, bool usesJavascript, bool usesCsharp)
     {
       Markdown readmeText = new Markdown();
-      readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
-      readmeText.AddText("title", title);
-      readmeText.AddText("titleClose", "**");
-
+      
+      //hero image
       readmeText.AddText("heroOpen", "<h1 align='center'><img width='900' height='450' src='");
       readmeText.AddText("heroURL", heroURL);
       readmeText.AddText("heroClose", "'><br>" );
 
+      //title markdown
+      readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
+      readmeText.AddText("title", title);
+      readmeText.AddText("titleClose", "**");
       
+      //tagline
+      readmeText.AddText("taglineOpen", "*<h2 align ='center'>");
+      readmeText.AddText("tagline", tagline);
+      readmeText.AddText("taglineClose", "*");
+
+      //navigation
       readmeText.AddText("navigationBar", "<h3 align ='center'><a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#technologies-used'>Technologies</a> •<a href='#❤️contributors'>Contributors</a>");
       readmeText.AddText("navClose", "</h3>");
 
+      //optional section nav elements
       readmeText.AddText("hasProtectingDataNav", "•<a href='#protecting-your-data'>Protecting Data</a>");
       readmeText.AddText("hasBugStatusNav", "•<a href='#known-bugs'>Bugs</a>");
-      
+      readmeText.AddText("hasCloningDataNav", "•<a href='#cloning'>Cloning</a>");
+    
+      //about
       readmeText.AddText("aboutOpen", "<h3 align='center'>" );
       readmeText.AddText("about", about);
-      readmeText.AddText("aboutClose", "</h3>");
-
+      readmeText.AddText("aboutClose", "</h3>");      
+      
+      //section headers
       readmeText.AddText("contributorsSectionHeader", "## **❤️Contributors**");
       readmeText.AddText("requirementSectionHeader", "## **REQUIREMENTS**");
+      readmeText.AddText("technologiesSectionHeader", "## **TECHNOLOGIES USED**");
+    
+      
+      
+      //keywords
+      readmeText.AddText("keyword1", keyword1);
+      readmeText.AddText("keyword2", keyword2);
+      readmeText.AddText("keyword3", keyword3);
+      readmeText.AddText("keyword4", keyword4);
+      readmeText.AddText("keyword5", keyword5);
+      readmeText.AddText("keyword6", keyword6);
+      
+      //SETUP OVER-ARCHING PARENT HEADER//
+      readmeText.AddText("setupSectionHeader", "## **SETUP**");
+
+      //OPTIONAL: cloning section
+      ViewBag.hasCloningDataNav = hasCloningDataNav;
+      //FIX/FINISH THIS!!!!!
+      readmeText.AddText("cloningSectionHeader", "## **CLONING**");
+
+      //OPTIONAL: protecting data section
+      ViewBag.hasProtectingDataNav = hasProtectingDataNav;
+      readmeText.AddText("protectionSectionHeader", "## **PROTECTING YOUR DATA**");
+      
+      //OPTIONAL: bug section
+      ViewBag.hasBugStatusNav = hasBugStatusNav;
+      readmeText.AddText("bugSectionHeader", "## **KNOWN BUGS**");
+      readmeText.AddText("bugStatus", bugStatus);
+      readmeText.AddText("bugOpen", "_**" );
+      readmeText.AddText("bugMiddle", " as of:** ");
+      readmeText.AddText("bugDate", bugDate);
+      readmeText.AddText("bugClose", "_");
+      
+      //technologies used
+      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
+      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
+      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
+      readmeText.AddText("usesCssSnippet", "_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_");
+      readmeText.AddText("usesJavascriptSnippet", "_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_");
+      readmeText.AddText("usesCsharpSnippet", "_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_");
+      readmeText.AddText("usesBootstrapSnippet", "_[Bootstrap](https://getbootstrap.com/)_");
+      readmeText.AddText("usesSwaggerSnippet", "_[Swagger](https://swagger.io/)_");
+      readmeText.AddText("usesAspDotnetMvcSnippet", "_[Asp.Net MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)_");
+      readmeText.AddText("usesHtmlSnippet", "_[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)_");
+      readmeText.AddText("usesNodeJsSnippet", "_[Node.js](https://nodejs.org/en/)_");
+      readmeText.AddText("usesWebpackSnippet", "_[Webpack](https://webpack.js.org/)_");
+      readmeText.AddText("usesJquerySnippet", "_[Jquery](https://jquery.com/)_");
+
+      //technologies used
+      ViewBag.usesCss = usesCss;
+      ViewBag.usesJavascript = usesJavascript;
+      ViewBag.usesCsharp = usesCsharp;
+      ViewBag.usesBootstrap = usesBootstrap;
+      ViewBag.usesSwagger = usesSwagger;
+      ViewBag.usesAspDotnetMvc = usesAspDotnetMvc;
+      ViewBag.usesHtml = usesHtml;
+      ViewBag.usesPhotoshop = usesPhotoshop;
+      ViewBag.usesVscode = usesVscode;
+      ViewBag.usesMysql = usesMysql;
+      ViewBag.usesNodeJs = usesNodeJs;
+      ViewBag.usesWebpack = usesWebpack;
+      ViewBag.usesJquery = usesJquery;
+
+      //contributors
       readmeText.AddText("contributorAllisonSadin", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/allison-sadin.jpeg' width='160px;'/><br /><sub><b>Allison Sadin</b></sub>](https://www.linkedin.com/in/allison-sadin-pdx/)<br />");
       readmeText.AddText("contributorBenWhite", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/ben-white.jpeg' width='160px;'/><br /><sub><b>Ben White</b></sub>](https://www.linkedin.com/in/ben-m-white/)<br />");
       readmeText.AddText("contributorBenRussell", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/ben-russell.jpeg' width='160px;'/><br /><sub><b>Ben Russell</b></sub>](https://www.linkedin.com/in/ben-russell36/)<br />");
@@ -77,68 +153,8 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("contributorThomasGlenn", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/thomas-glenn.jpeg' width='160px;'/><br /><sub><b>Thomas Glenn</b></sub>](https://www.linkedin.com/in/glennergy/)<br />");
       readmeText.AddText("contributorTristanEmmerson", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/tristan-emmerson.jpeg' width='160px;'/><br /><sub><b>Tristan Emmerson</b></sub>](https://www.linkedin.com/in/tristan-emmerson/)<br />");
       readmeText.AddText("contributorTysonLackey", "| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/tyson-lackey.jpeg' width='160px;'/><br /><sub><b>Tyson Lackey</b></sub>](https://www.linkedin.com/in/tyson-lackey/)<br />");
-      
-      
-      readmeText.AddText("setupSectionHeader", "## **SETUP**");
-      readmeText.AddText("protectionSectionHeader", "## **PROTECTING YOUR DATA**");
-      readmeText.AddText("technologiesSectionHeader", "## **Technologies Used**");
-      readmeText.AddText("bugSectionHeader", "## **Known Bugs**");
 
-      
-      
-      readmeText.AddText("keyword1", keyword1);
-      readmeText.AddText("keyword2", keyword2);
-      readmeText.AddText("keyword3", keyword3);
-      readmeText.AddText("keyword4", keyword4);
-      readmeText.AddText("keyword5", keyword5);
-      readmeText.AddText("keyword6", keyword6);
-
-
-
-      readmeText.AddText("taglineOpen", "*<h2 align ='center'>");
-      readmeText.AddText("tagline", tagline);
-      readmeText.AddText("taglineClose", "*");
-      
-
-      
-      readmeText.AddText("bugStatus", bugStatus);
-      readmeText.AddText("bugOpen", "_**" );
-      readmeText.AddText("bugMiddle", " as of:** ");
-      readmeText.AddText("bugDate", bugDate);
-      readmeText.AddText("bugClose", "_");
-      ViewBag.hasProtectingDataNav = hasProtectingDataNav;
-      ViewBag.hasBugStatusNav = hasBugStatusNav;
-
-      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
-      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
-      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
-      readmeText.AddText("usesCssSnippet", "_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_");
-      readmeText.AddText("usesJavascriptSnippet", "_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_");
-      readmeText.AddText("usesCsharpSnippet", "_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_");
-      readmeText.AddText("usesBootstrapSnippet", "_[Bootstrap](https://getbootstrap.com/)_");
-      readmeText.AddText("usesSwaggerSnippet", "_[Swagger](https://swagger.io/)_");
-      readmeText.AddText("usesAspDotnetMvcSnippet", "_[Asp.Net MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)_");
-      readmeText.AddText("usesHtmlSnippet", "_[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)_");
-      readmeText.AddText("usesNodeJsSnippet", "_[Node.js](https://nodejs.org/en/)_");
-      readmeText.AddText("usesWebpackSnippet", "_[Webpack](https://webpack.js.org/)_");
-      readmeText.AddText("usesJquerySnippet", "_[Jquery](https://jquery.com/)_");
-
-
-      ViewBag.usesCss = usesCss;
-      ViewBag.usesJavascript = usesJavascript;
-      ViewBag.usesCsharp = usesCsharp;
-      ViewBag.usesBootstrap = usesBootstrap;
-      ViewBag.usesSwagger = usesSwagger;
-      ViewBag.usesAspDotnetMvc = usesAspDotnetMvc;
-      ViewBag.usesHtml = usesHtml;
-      ViewBag.usesPhotoshop = usesPhotoshop;
-      ViewBag.usesVscode = usesVscode;
-      ViewBag.usesMysql = usesMysql;
-      ViewBag.usesNodeJs = usesNodeJs;
-      ViewBag.usesWebpack = usesWebpack;
-      ViewBag.usesJquery = usesJquery;
-
-
+      //contributors
       ViewBag.hasAllisonSadin = hasAllisonSadin;
       ViewBag.hasBenWhite = hasBenWhite;
       ViewBag.hasBenRussell = hasBenRussell;
@@ -176,6 +192,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       ViewBag.hasThomasGlenn = hasThomasGlenn;
       ViewBag.hasTristanEmmerson = hasTristanEmmerson;
       ViewBag.hasTysonLackey = hasTysonLackey;
+      
       return View(readmeText);
     }
     }

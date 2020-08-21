@@ -63,6 +63,7 @@ namespace MakeMeTakeMeReadMe.Models
     public bool usesVscode { get; set; }
     public bool hasBugStatusNav { get; set; }
     public bool hasProtectingDataNav { get; set; }
+    public bool hasCloningDataNav { get; set; }
     public string SectionHeaders(string key)
     {
       if (_markdownSnippetList.ContainsKey(key))

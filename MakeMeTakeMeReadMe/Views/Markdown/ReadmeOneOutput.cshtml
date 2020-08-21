@@ -41,13 +41,19 @@
         @if (ViewBag.usesMysql){<p>@Model.SectionHeaders("usesMysqlSnippet")</p>}
       <br>
       
+      @if (ViewBag.hasBugStatusNav){
       <p>@Model.SectionHeaders("bugSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("bugOpen")@Model.SectionHeaders("bugStatus")@Model.SectionHeaders("bugMiddle")@Model.SectionHeaders("bugDate")@Model.SectionHeaders("bugClose")</p>
       <br>
-      <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
+      }
+
+      @if (ViewBag.hasCloningDataNav){
+      <p>@Model.SectionHeaders("cloningSectionHeader")</p>
       <br>
-      
+      }
+      <br>
+      <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
       @if (ViewBag.hasAllisonSadin){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
       @if (ViewBag.hasBenWhite){<p>@Model.SectionHeaders("contributorBenWhite")</p>}
       @if (ViewBag.hasBenRussell){<p>@Model.SectionHeaders("contributorBenRussell")</p>}
