@@ -84,7 +84,10 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("bugDate", bugDate);
       readmeText.AddText("bugClose", "_");
       
-      //OPTIONAL technologies used
+      //OPTIONAL: specifications section
+      ViewBag.hasSpecificationsDataNav = hasSpecificationDataNav;
+
+      //OPTIONAL: technologies used
       ViewBag.usesCss = usesCss;
       ViewBag.usesJavascript = usesJavascript;
       ViewBag.usesCsharp = usesCsharp;
