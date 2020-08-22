@@ -15,7 +15,7 @@
 # WHERE I DON'T GOT YOU
 * Members of the cohort who have dropped prior to my starting this project. I love all y'all, but I had to draw the line somewhere. 
 
-* 
+* Specifications: I did not add logic for creating your spec table. If your project has specifications, select the checkbox for Specifications to add the Section Header for your Specs, and then use this great resource for making your spec table quickly. [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables)
 
 
 

@@ -104,7 +104,7 @@
       @if (ViewBag.hasTristanEmmerson){<p>@Model.SectionHeaders("contributorTristanEmmerson")</p>}
       @if (ViewBag.hasTysonLackey){<p>@Model.SectionHeaders("contributorTysonLackey")</p>}
       
-      <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
+      <p>@Model.SectionHeaders("keyword1") @Model.SectionHeaders("keyword2") @Model.SectionHeaders("keyword3") @Model.SectionHeaders("keyword4") @Model.SectionHeaders("keyword5") @Model.SectionHeaders("keyword6")</p>
       <p>@Model.SectionHeaders("mitLicense1")</p>
       <p>@Model.SectionHeaders("mitLicense2")</p>
     </div>
