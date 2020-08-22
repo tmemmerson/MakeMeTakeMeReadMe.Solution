@@ -10,7 +10,7 @@
 
 * I hardcoded your photo and linked-in url in the "Contributors" section so if someone likes your work, they can get right to your linked-in.
 
-* 
+* A note on the "About" section and the "Keywords": Write a thorough about section and fill in the keywords. Paste the "About" section in the Description area and the "Keywords" in the Topics section as shown below in the picture. This IMMENSELY helps fill out your repo and helps you get found MUCH easier. 
 
 # WHERE I DON'T GOT YOU
 * Members of the cohort who have dropped prior to my starting this project. I love all y'all, but I had to draw the line somewhere. 

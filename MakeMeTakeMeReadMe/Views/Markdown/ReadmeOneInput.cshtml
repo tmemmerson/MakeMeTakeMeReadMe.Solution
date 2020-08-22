@@ -6,6 +6,8 @@
   <div class="container">
     <form action="/readmeOneOutput" method="post">
       <div class="row">
+
+        @* meta data *@
         <div class="col-md-6">
           <div class="form-group">
             <label for="title">title</label>
@@ -15,11 +17,46 @@
             <label for="tagline">tagline</label>
             <input class="form-control" id="tagline" name="tagline" type="text">
           </div>
+            <div class="form-group">
+            <label for="heroURL">hero url (see documentation for stocks)</label>
+            <input class="form-control" id="heroURL" name="heroURL" type="text">
+          </div>
           <div class="form-group">
             <label for="about">about section</label>
             <input class="form-control" id="about" name="about" type="text">
           </div>
+          
+          <div class="form-group">
+            <b>Technologies Used: </b><br />
+            <span>{Photoshop: </span><input type="checkbox" name="usesPhotoshop" value="true">}
+            <br>
+            <span>{Vscode: </span><input type="checkbox" name="usesVscode" value="true">}
+            <br>
+            <span>{Mysqlworkbench: <input type="checkbox" name="usesMysql" value="true">}
+            <br>
+            <span>{Javascript: <input type="checkbox" name="usesJavascript" value="true">}
+            <br>
+            <span>{CSS: <input type="checkbox" name="usesCss" value="true">}
+            <br>
+            <span>{Bootstrap: <input type="checkbox" name="usesBootstrap" value="true">}
+            <br>
+            <span>{C#: <input type="checkbox" name="usesCsharp" value="true">}
+            <br>
+            <span>{Swagger: <input type="checkbox" name="usesSwagger" value="true">}
+            <br>
+            <span>{Asp.Net MVC: <input type="checkbox" name="usesAspDotnetMvc" value="true">}
+            <br>
+            <span>{HTML: <input type="checkbox" name="usesHtml" value="true">}
+            <br>
+            <span>{NodeJs: <input type="checkbox" name="usesNodeJs" value="true">}
+            <br>
+            <span>{Webpack: <input type="checkbox" name="usesWebpack" value="true">}
+            <br>
+            <span>{Jquery: <input type="checkbox" name="usesJquery" value="true">}
+          </div>
         </div>
+
+        @* keywords *@
         <div class="col-md-6">
           <div class="form-group">
             <label for="keyword1">keyword 1</label>
@@ -33,9 +70,7 @@
             <label for="keyword3">keyword 3</label>
             <input class="form-control" id="keyword3" name="keyword3" type="text">
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
+            <div class="form-group">
             <label for="keyword4">keyword 4</label>
             <input class="form-control" id="keyword4" name="keyword4" type="text">
           </div>
@@ -47,17 +82,18 @@
             <label for="keyword6">keyword 6</label>
             <input class="form-control" id="keyword6" name="keyword6" type="text">
           </div>
+        </div>
+        
+        @* empty column *@
+        <div class="col-md-6">
         </div>  
+
         <div class="col-md-6">
           <div class="form-group">
-            <label for="heroURL">hero url (see documentation for stocks)</label>
-            <input class="form-control" id="heroURL" name="heroURL" type="text">
-          </div>
-          
-          <div class="form-group">
-            <span>| Add Data Protection Section? </span><input type="checkbox" name="hasProtectingDataNav" value="true">
-            <span>| Add Bug Status? </span><input type="checkbox" name="hasBugStatusNav" value="true">
-            <span>| Add Section on Cloning? </span><input type="checkbox" name="hasCloningDataNav" value="true">
+            <b>Optional Setup Sections: </b><br />
+            <span><input type="checkbox" name="hasProtectingDataNav" value="true"> Git ignore file handling?</span>
+            <span><input type="checkbox" name="hasBugStatusNav" value="true"> Bug Status?</span>
+            <span><input type="checkbox" name="hasCloningDataNav" value="true"> Cloning?</span>
           </div>
           <div class="form-group">
             <label for="bugStatus">bug status</label>
@@ -68,61 +104,82 @@
             <input class="form-control" id="bugDate" name="bugDate" type="text">
           </div>
 
-          <div class="form-group">
-            <b>Technologies Used: </b><br />
-            <span>| Photoshop: </span><input type="checkbox" name="usesPhotoshop" value="true">
-            <span>| Vscode: </span><input type="checkbox" name="usesVscode" value="true">
-            <span>| Mysqlworkbench:<input type="checkbox" name="usesMysql" value="true">
-            <span>| Javascript:<input type="checkbox" name="usesJavascript" value="true">    
-            <span>| CSS:<input type="checkbox" name="usesCss" value="true">    
-            <span>| Bootstrap:<input type="checkbox" name="usesBootstrap" value="true">
-            <span>| C#:<input type="checkbox" name="usesCsharp" value="true">
-            <span>| Swagger:<input type="checkbox" name="usesSwagger" value="true">
-            <span>| Asp.Net MVC:<input type="checkbox" name="usesAspDotnetMvc" value="true">
-            <span>| HTML:<input type="checkbox" name="usesHtml" value="true">
-            <span>| NodeJs:<input type="checkbox" name="usesNodeJs" value="true">
-            <span>| Webpack:<input type="checkbox" name="usesWebpack" value="true">
-            <span>| Jquery:<input type="checkbox" name="usesJquery" value="true">
-          </div>
+
         </div>
         <div class="form-group">
             <b>Contributors: </b><br />
             <span>| Allison Sadin: <input type="checkbox" name="hasAllisonSadin" value="true">
+            <br>
             <span>| Ben White: <input type="checkbox" name="hasBenWhite" value="true">
+            <br>
             <span>| Ben Russell: <input type="checkbox" name="hasBenRussell" value="true">
+            <br>
             <span>| Beverly Potts: <input type="checkbox" name="hasBeverlyPotts" value="true">
+            <br>
             <span>| Brittany Lindgren: <input type="checkbox" name="hasBrittanyLindgren" value="true">
+            <br>
             <span>| Christine Augustine: <input type="checkbox" name="hasChristineAugustine" value="true">
+            <br>
             <span>| Chris Yoon: <input type="checkbox" name="hasChrisYoon" value="true">
+            <br>
             <span>| Cody Fritz: <input type="checkbox" name="hasCodyFritz" value="true">
+            <br>
             <span>| Deryck Jackson: <input type="checkbox" name="hasDeryckJackson" value="true">
+            <br>
             <span>| Erich Richter: <input type="checkbox" name="hasErichRichter" value="true">
+            <br>
             <span>| Evgeniya Chernaya: <input type="checkbox" name="hasEvgeniyaChernaya" value="true">
+            <br>
             <span>| Frederick Ernest: <input type="checkbox" name="hasFrederickErnest" value="true">
+            <br>
             <span>| Hannah Beinstein: <input type="checkbox" name="hasHannahBeinstein" value="true">
+            <br>
             <span>| Ian Gregg: <input type="checkbox" name="hasIanGregg" value="true">
+            <br>
             <span>| Ian Scott: <input type="checkbox" name="hasIanScott" value="true">
+            <br>
             <span>| James Henager: <input type="checkbox" name="hasJamesHenager" value="true">
+            <br>
             <span>| Jason Khan: <input type="checkbox" name="hasJasonKhan" value="true">
+            <br>
             <span>| Jeffrey Kim: <input type="checkbox" name="hasJeffreyKim" value="true">
+            <br>
             <span>| JohnNils Olson: <input type="checkbox" name="hasJohnNilsOlson" value="true">
+            <br>
             <span>| Joseph Pearce: <input type="checkbox" name="hasJosephPearce" value="true">
+            <br>
             <span>| Kate Skorija: <input type="checkbox" name="hasKateSkorija" value="true">
+            <br>
             <span>| Kevin Davis: <input type="checkbox" name="hasKevinDavis" value="true">
+            <br>
             <span>| Kyle Hubbard: <input type="checkbox" name="hasKyleHubbard" value="true">
+            <br>
             <span>| Mariel Hamson: <input type="checkbox" name="hasMarielHamson" value="true">
+            <br>
             <span>| Megan Hepner: <input type="checkbox" name="hasMeganHepner" value="true">
+            <br>
             <span>| Micheal Hansen: <input type="checkbox" name="hasMichealHansen" value="true">
+            <br>
             <span>| Noel Kirkland: <input type="checkbox" name="hasNoelKirkland" value="true">
+            <br>
             <span>| Peter Grimm: <input type="checkbox" name="hasPeterGrimm" value="true">
+            <br>
             <span>| Sara Kane: <input type="checkbox" name="hasSaraKane" value="true">
+            <br>
             <span>| Sean Downs: <input type="checkbox" name="hasSeanDowns" value="true">
+            <br>
             <span>| Spencer Moody: <input type="checkbox" name="hasSpencerMoody" value="true">
+            <br>
             <span>| Taylor Phillips: <input type="checkbox" name="hasTaylorPhillips" value="true">
+            <br>
             <span>| Taylor Somers: <input type="checkbox" name="hasTaylorSomers" value="true">
+            <br>
             <span>| Teresa Rosinksi: <input type="checkbox" name="hasTeresaRosinksi" value="true">
+            <br>
             <span>| Thomas Glenn: <input type="checkbox" name="hasThomasGlenn" value="true">
+            <br>
             <span>| Tristan Emmerson: <input type="checkbox" name="hasTristanEmmerson" value="true">
+            <br>
             <span>| Tyson Lackey: <input type="checkbox" name="hasTysonLackey" value="true">    
           </div>
         </div>
