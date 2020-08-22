@@ -48,3 +48,27 @@ SETUP
   * data protection
   * 
 
+
+
+DatabaseProject with Migrations
+open and sign-in to MySql to start database services (these credentials are the same as in your app settings)
+
+``
+cd AnimalShelter
+``
+
+``
+dotnet restore
+``
+
+``
+dotnet build
+``
+
+``
+dotnet ef database update
+``
+
+``
+dotnet watch run
+``
