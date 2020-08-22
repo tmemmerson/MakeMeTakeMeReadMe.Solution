@@ -3,7 +3,9 @@
 
 
 
+ABOUT
 
+This project was made for the May 2020 Epicodus Cohort in an effort to make updating and editing the ~100+ repos we have made thus far. This application allows the user to input a projects details in a simple form, and output a well-structured and aesthetically pleasing README.md without getting bogged down in markdown syntax and worrying about uniformity across your repos. 
 
 # WHERE I GOT YOU
 * You can insert your own hyperlink for your hero-image or, at the bottom of this document are hyperlinks with a brief description.  All images are formatted to 900x450
