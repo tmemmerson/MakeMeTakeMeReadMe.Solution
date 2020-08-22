@@ -64,9 +64,17 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasBugStatusNav { get; set; }
     public bool hasProtectingDataNav { get; set; }
     public bool hasCloningDataNav { get; set; }
+    public bool hasSpecificationDataNav { get; set; }    
+
+
+    public bool hasAppSettings { get; set; } //not implemented
+    public bool hasDatabaseMigrations { get; set; } //not implemented
+    
+
     public bool requiresVscode { get; set; } //not implemented
     public bool requiresMysql { get; set; } //not implemented
-    public bool hasSpecificationDataNav { get; set; }
+    public bool requiresDotnetCore { get; set; } //not implemented
+
   
     public string SectionHeaders(string key)
     {
