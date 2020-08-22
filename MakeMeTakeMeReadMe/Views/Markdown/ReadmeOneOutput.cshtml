@@ -8,21 +8,35 @@
   </div>
   <div class="row">
     <div class="col-lg-6">
+
+      @* META *@
       <p>@Model.SectionHeaders("heroOpen")@Model.SectionHeaders("heroURL")@Model.SectionHeaders("heroClose")</p>
       <br>
       <p>@Model.SectionHeaders("titleOpen")@Model.SectionHeaders("title")@Model.SectionHeaders("titleClose")</p>
       <br>
       <p>@Model.SectionHeaders("taglineOpen")@Model.SectionHeaders("tagline")@Model.SectionHeaders("taglineClose")</p>
       <br>
-      <p>@Model.SectionHeaders("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.SectionHeaders("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.SectionHeaders("hasProtectingDataNav")}@Model.SectionHeaders("navClose")</p>
+      <p>@Model.SectionHeaders("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.SectionHeaders("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.SectionHeaders("hasProtectingDataNav")}@if (ViewBag.hasSpecificationsDataNav){@Model.SectionHeaders("hasSpecificationsDataNav")}@Model.SectionHeaders("navClose")</p>
       <br>
       <p>@Model.SectionHeaders("aboutOpen")@Model.SectionHeaders("about")@Model.SectionHeaders("aboutClose")</p>
       <br>
+      
+      @* REQUIREMENTS SECTION *@
       <p>@Model.SectionHeaders("requirementSectionHeader")</p>
       <br>
+
+      @* OPTIONAL: SPECIFICATIONS HEADER *@
+      @if (ViewBag.hasSpecificationsDataNav){
+      <p>@Model.SectionHeaders("specificationsSectionHeader")</p>   
+      <br>
+      }
+
+      @* SETUP SECTION HEADER *@
       <br>
       <p>@Model.SectionHeaders("setupSectionHeader")</p>
       <br>
+
+      @* OPTIONAL: CLONING SECTION *@
       @if (ViewBag.hasCloningDataNav){
       <p>@Model.SectionHeaders("cloningSectionHeader")</p>
       <p>@Model.SectionHeaders("cloningTutorial1")</p>
@@ -33,6 +47,7 @@
       <br>
       }
 
+      @* OPTIONAL: DATA PROTECTION SECTION *@
       @if (ViewBag.hasProtectingDataNav){
       <p>@Model.SectionHeaders("protectionSectionHeader")</p>
       <p>@Model.SectionHeaders("protectionTutorial1")</p>
@@ -41,6 +56,7 @@
       <br>
       }
 
+      @* TECHNOLOGIES USED SECTION *@
       <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
         @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("usesPhotoshopSnippet")</p>}
         @if (ViewBag.usesCsharp){<p>@Model.SectionHeaders("usesCsharpSnippet")</p>}
@@ -57,14 +73,16 @@
         @if (ViewBag.usesMysql){<p>@Model.SectionHeaders("usesMysqlSnippet")</p>}
       <br>
       
+      @* OPTIONAL: BUG STATUS SECTION *@
       @if (ViewBag.hasBugStatusNav){
       <p>@Model.SectionHeaders("bugSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("bugOpen")@Model.SectionHeaders("bugStatus")@Model.SectionHeaders("bugMiddle")@Model.SectionHeaders("bugDate")@Model.SectionHeaders("bugClose")</p>
       <br>
       }
-
       <br>
+
+      @* CONTRIBUTORS SECTION *@
       <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
       @if (ViewBag.hasAllisonSadin){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
       @if (ViewBag.hasBenWhite){<p>@Model.SectionHeaders("contributorBenWhite")</p>}
@@ -104,9 +122,13 @@
       @if (ViewBag.hasTristanEmmerson){<p>@Model.SectionHeaders("contributorTristanEmmerson")</p>}
       @if (ViewBag.hasTysonLackey){<p>@Model.SectionHeaders("contributorTysonLackey")</p>}
       
+      @* KEYWORD SECTION *@
       <p>@Model.SectionHeaders("keyword1") @Model.SectionHeaders("keyword2") @Model.SectionHeaders("keyword3") @Model.SectionHeaders("keyword4") @Model.SectionHeaders("keyword5") @Model.SectionHeaders("keyword6")</p>
+      
+      @* LICENSE SECTION *@
       <p>@Model.SectionHeaders("mitLicense1")</p>
       <p>@Model.SectionHeaders("mitLicense2")</p>
+      
     </div>
   </div>
   <div class="row">
