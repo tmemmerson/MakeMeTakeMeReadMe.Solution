@@ -13,53 +13,15 @@
 * A note on the "About" section and the "Keywords": Write a thorough about section and fill in the keywords. Paste the "About" section in the Description area and the "Keywords" in the Topics section as shown below in the picture. This IMMENSELY helps fill out your repo and helps you get found MUCH easier. 
 ![MetaData](https://coding-assets.s3-us-west-2.amazonaws.com/img/meta-data-readme.png)
 
+<br>
+
 # WHERE I DON'T GOT YOU
 * Members of the cohort who have dropped prior to my starting this project. I love all y'all, but I had to draw the line somewhere. 
 
 * Specifications: I did not add logic for creating your spec table. If your project has specifications, select the checkbox for Specifications to add the Section Header for your Specs, and then use this great resource for making your spec table quickly. [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<br>
 
 # HERO IMAGE LINKS
 
