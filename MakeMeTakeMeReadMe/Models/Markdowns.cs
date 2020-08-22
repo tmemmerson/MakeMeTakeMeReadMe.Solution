@@ -66,6 +66,7 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasCloningDataNav { get; set; }
     public bool requiresVscode { get; set; } //not implemented
     public bool requiresMysql { get; set; } //not implemented
+    public bool hasSpecificationDataNav { get; set; }
   
     public string SectionHeaders(string key)
     {
