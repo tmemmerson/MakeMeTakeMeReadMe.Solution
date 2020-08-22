@@ -1,47 +1,112 @@
-<h1 align='center'><img width='900' height='450' src='sdfgsfg'><br>
-
-
-**<h1 align = 'center'>asdfaf**
-
-
-*<h2 align ='center'>dfgsdfgsdf*
-
-
-<h3 align ='center'><a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#technologies-used'>Technologies</a> •<a href='#❤️contributors'>Contributors</a></h3>
-
-
-<h3 align='center'>gsdfgsdfg</h3>
-
-
-# **REQUIREMENTS**
 
 
 
-# **SETUP**
 
 
-# **TECHNOLOGIES USED**
 
-_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_
 
-_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_
+# WHERE I GOT YOU
+* You can insert your own hyperlink for your hero-image or, at the bottom of this document are hyperlinks with a brief detailing description which are all formatted to 900x450
 
-_[Swagger](https://swagger.io/)_
+* I hardcoded your photo and linked-in url in the "Contributors" section so if someone likes your work, they can get right to your linked-in.
 
-_[Visual Studio Code](https://code.visualstudio.com/)_
+* 
 
-_[MySql Workbench](https://www.mysql.com/products/workbench/)_
+# WHERE I DON'T GOT YOU
+* Members of the cohort who have dropped prior to my starting this project. I love all y'all, but I had to draw the line somewhere. 
 
-# **❤️Contributors**
+* 
 
-| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/beverly-potts.jpeg' width='160px;'/><br /><sub><b>Beverly Potts</b></sub>](https://www.linkedin.com/in/beverlypotts/)<br />
 
-| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/deryck-jackson.jpeg' width='160px;'/><br /><sub><b>Deryck Jackson</b></sub>](https://www.linkedin.com/in/deryckjackson/)<br />
 
-| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/hannah-beinstein.jpeg' width='160px;'/><br /><sub><b>Hannah Beinstein</b></sub>](https://www.linkedin.com/in/hannahbeinstein/)<br />
 
-#dfgsfdg, #sdfgsdfg, #sdfgsdfgs, #sdfgsgfs, #dfgsdfgs, #sdfgsdfg
 
-![alt text][logo]
 
-[logo]: https://img.shields.io/bower/l/bootstrap 'MIT License'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# HERO IMAGE LINKS
+
+cars/dealership ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Car-Dealership.jpg``
+
+cats and dogs at rescure ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/AnimalShelter.Solution.jpg``
+
+puzzle pieces scattered ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Crypto-Square-Generator.jpg``
+
+lorax and factory ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Factory.Solution.jpg``
+
+mad libs ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/MadLibs.Solution.jpg``
+
+journal/travel ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/NewFavoriteThings.jpg``
+
+letter tiles ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Scrabble.Solution.jpg``
+
+postcard ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/FriendLetter.Solution.jpg``
+
+journal/to-do-list/address book ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/TaskList.Solution.jpg``
+
+journal/to-do-list/address book ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/address-book.jpg``
+
+cats at a shelter ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/animal-shelter.jpg``
+
+bank/currency/money/piggybank ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/banking.jpg``
+
+cookies ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/cookie-recipe.jpg``
+
+flashcards ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/flashcards.jpg``
+
+library/book ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/libary.solution.jpg``
+
+movies/popcorn ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/movie-tickets.jpg``
+
+dice/pig-dice ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/pig-dice.jpg``
+
+robot/robodgers ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/robo-rodgers.jpg``
+
+triangle tracker ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/triangle.jpg``
+
+travel/vacation/favorite things ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/vacation-site.jpg``
+
+wikipedia ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/wikipedia-recreation.jpg``
+
+
+
+
+
+
+
