@@ -20,26 +20,26 @@ namespace MakeMeTakeMeReadMe.Controllers
     {
       Markdown readmeText = new Markdown();
       
-      //hero image
+      //HERO IMAGE
       readmeText.AddText("heroOpen", "<h1 align='center'><img width='900' height='450' src='");
       readmeText.AddText("heroURL", heroURL);
       readmeText.AddText("heroClose", "'><br>" );
 
-      //title markdown
+      //TITLE
       readmeText.AddText("titleOpen", "**<h1 align = 'center'>");
       readmeText.AddText("title", title);
       readmeText.AddText("titleClose", "**");
       
-      //tagline
+      //OPTIONAL: TAGLINE
       readmeText.AddText("taglineOpen", "*<h2 align ='center'>");
       readmeText.AddText("tagline", tagline);
       readmeText.AddText("taglineClose", "*");
 
-      //navigation
+      //NAVIGATION
       readmeText.AddText("navigationBar", "<h3 align ='center'><a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#technologies-used'>Technologies</a> •<a href='#❤️contributors'>Contributors</a>");
       readmeText.AddText("navClose", "</h3>");
 
-      //about
+      //ABOUT SECTION
       readmeText.AddText("aboutOpen", "<h3 align='center'>" );
       readmeText.AddText("about", about);
       readmeText.AddText("aboutClose", "</h3>");      
@@ -139,16 +139,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("ApiCrudTutorial13", "* Select JSON from dropdown");
       readmeText.AddText("ApiCrudTutorial14", "* Write your addition to the database in the following format");
       readmeText.AddText("ApiCrudTutorial15", "<br>");
-      readmeText.AddText("ApiCrudTutorial16", "``");
-      readmeText.AddText("ApiCrudTutorial17", "{");
-      readmeText.AddText("ApiCrudTutorial18", "petId: 1,");
-      readmeText.AddText("ApiCrudTutorial19", "petName: 'Mark',");
-      readmeText.AddText("ApiCrudTutorial20", "petAdmissionDate: '8/13/2020',");
-      readmeText.AddText("ApiCrudTutorial21", "petTaxonomy: 'Cat',");
-      readmeText.AddText("ApiCrudTutorial22", "petBreed: 'Calico',");
-      readmeText.AddText("ApiCrudTutorial23", "petDescription: 'Don't look Mark straight in the eyes. He likes to get scratchy.'");
-      readmeText.AddText("ApiCrudTutorial24", "}");
-      readmeText.AddText("ApiCrudTutorial25", "``");
+      readmeText.AddText("ApiCrudTutorial18", "``{itemId: 1, itemName: 'Mark', itemDate: '8/13/2020', itemDetails: 'big''}``");
       readmeText.AddText("ApiCrudTutorial26", "* Hit Send");
       readmeText.AddText("ApiCrudTutorial27", "## TO EDIT AN ITEM");
       readmeText.AddText("ApiCrudTutorial28", "* Open Postman");
@@ -166,7 +157,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("ApiCrudTutorial40", "## USING PAGINATION");
       readmeText.AddText("ApiCrudTutorial41", "* you can use routing in this structure when making your requests to limit the return data");
       readmeText.AddText("ApiCrudTutorial42", "* adjust the PageNumber and PageSize values in your request to do so");
-      readmeText.AddText("ApiCrudTutorial43", "* http://localhost:5000/api/pets/page?PageNumber=2&PageSize=5");
+      readmeText.AddText("ApiCrudTutorial43", "* http://localhost:5000/api/items/page?PageNumber=2&PageSize=5");
       readmeText.AddText("ApiCrudTutorial44", "<br>");
 
       //OPTIONAL: TECHNOLOGIES USED
