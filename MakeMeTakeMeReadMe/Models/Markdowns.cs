@@ -67,13 +67,14 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasCloningDataNav { get; set; } 
     public bool hasAppSettings { get; set; }
     public bool hasDatabaseMigrations { get; set; } 
-    public bool hasApiCrudSection { get; set; } 
+    public bool hasApiCrudSection { get; set; }
+    public bool hasPaginationSection { get; set; } 
     public bool requiresPostman { get; set; } 
     public bool requiresVscode { get; set; }
     public bool requiresMysql { get; set; } 
     public bool requiresDotnetCore { get; set; } 
   
-    public string SectionHeaders(string key)
+    public string MarkdownPiece(string key)
     {
       if (_markdownSnippetList.ContainsKey(key))
       {
