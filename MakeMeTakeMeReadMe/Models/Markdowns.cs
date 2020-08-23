@@ -62,19 +62,16 @@ namespace MakeMeTakeMeReadMe.Models
     public bool usesMysql { get; set; }
     public bool usesVscode { get; set; }
     public bool hasBugStatusNav { get; set; }
+    public bool hasSpecificationsDataNav { get; set; }   
     public bool hasProtectingDataNav { get; set; }
-    public bool hasCloningDataNav { get; set; }
-    public bool hasSpecificationDataNav { get; set; }    
-
-
-    public bool hasAppSettings { get; set; } //not implemented
-    public bool hasDatabaseMigrations { get; set; } //not implemented
-    
-
-    public bool requiresVscode { get; set; } //not implemented
-    public bool requiresMysql { get; set; } //not implemented
-    public bool requiresDotnetCore { get; set; } //not implemented
-
+    public bool hasCloningDataNav { get; set; } 
+    public bool hasAppSettings { get; set; }
+    public bool hasDatabaseMigrations { get; set; } 
+    public bool hasApiCrudSection { get; set; } 
+    public bool requiresPostman { get; set; } 
+    public bool requiresVscode { get; set; }
+    public bool requiresMysql { get; set; } 
+    public bool requiresDotnetCore { get; set; } 
   
     public string SectionHeaders(string key)
     {

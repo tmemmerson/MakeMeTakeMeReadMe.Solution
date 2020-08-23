@@ -8,35 +8,47 @@
   </div>
   <div class="row">
     <div class="col-lg-6">
-
-      @* META *@
       <p>@Model.SectionHeaders("heroOpen")@Model.SectionHeaders("heroURL")@Model.SectionHeaders("heroClose")</p>
       <br>
       <p>@Model.SectionHeaders("titleOpen")@Model.SectionHeaders("title")@Model.SectionHeaders("titleClose")</p>
       <br>
       <p>@Model.SectionHeaders("taglineOpen")@Model.SectionHeaders("tagline")@Model.SectionHeaders("taglineClose")</p>
       <br>
-      <p>@Model.SectionHeaders("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.SectionHeaders("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.SectionHeaders("hasProtectingDataNav")}@if (ViewBag.hasSpecificationsDataNav){@Model.SectionHeaders("hasSpecificationsDataNav")}@Model.SectionHeaders("navClose")</p>
+      <p>@Model.SectionHeaders("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.SectionHeaders("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.SectionHeaders("hasProtectingDataNav")}@Model.SectionHeaders("navClose")</p>
       <br>
       <p>@Model.SectionHeaders("aboutOpen")@Model.SectionHeaders("about")@Model.SectionHeaders("aboutClose")</p>
       <br>
       
-      @* REQUIREMENTS SECTION *@
-      <p>@Model.SectionHeaders("requirementSectionHeader")</p>
-      <br>
+      
+      
 
-      @* OPTIONAL: SPECIFICATIONS HEADER *@
       @if (ViewBag.hasSpecificationsDataNav){
       <p>@Model.SectionHeaders("specificationsSectionHeader")</p>   
       <br>
+      <p>insert your markdown table from [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) right here!</p>
+      <br>
       }
 
-      @* SETUP SECTION HEADER *@
+
+      <p>@Model.SectionHeaders("requirementSectionHeader")</p>
+      @if (ViewBag.requiresPostman){
+        <p>@Model.SectionHeaders("requiresPostman")</p>
+      }
+      @if (ViewBag.requiresVscode){
+        <p>@Model.SectionHeaders("requiresVscode")</p>
+      }
+      @if (ViewBag.requiresMysql){
+        <p>@Model.SectionHeaders("requiresMysql")</p>
+      }
+      @if (ViewBag.requiresDotnetCore){
+        <p>@Model.SectionHeaders("requiresDotnetCore")</p>
+      }
+      <br>
+
+
       <br>
       <p>@Model.SectionHeaders("setupSectionHeader")</p>
       <br>
-
-      @* OPTIONAL: CLONING SECTION *@
       @if (ViewBag.hasCloningDataNav){
       <p>@Model.SectionHeaders("cloningSectionHeader")</p>
       <p>@Model.SectionHeaders("cloningTutorial1")</p>
@@ -47,7 +59,16 @@
       <br>
       }
 
-      @* OPTIONAL: DATA PROTECTION SECTION *@
+
+
+      @if (ViewBag.hasAppSettings){
+      <p>@Model.SectionHeaders("AppSettingsHeader")</p>
+      <p>@Model.SectionHeaders("appSettingsTutorial1")</p>
+      <p>@Model.SectionHeaders("appSettingsTutorial2")</p>
+      <p>@Model.SectionHeaders("appSettingsTutorial3")</p>
+      <br>
+      }
+      
       @if (ViewBag.hasProtectingDataNav){
       <p>@Model.SectionHeaders("protectionSectionHeader")</p>
       <p>@Model.SectionHeaders("protectionTutorial1")</p>
@@ -56,7 +77,80 @@
       <br>
       }
 
-      @* TECHNOLOGIES USED SECTION *@
+      @if (ViewBag.hasApiCrudSection){
+      <p>@Model.SectionHeaders("ApiCrudHeader")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial1")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial2")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial3")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial4")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial5")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial6")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial7")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial8")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial9")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial10")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial11")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial12")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial13")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial14")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial15")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial16")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial17")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial18")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial19")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial20")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial21")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial22")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial23")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial24")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial25")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial26")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial27")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial28")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial29")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial30")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial31")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial32")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial33")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial34")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial35")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial36")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial37")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial38")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial39")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial40")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial41")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial42")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial43")</p>
+      <p>@Model.SectionHeaders("ApiCrudTutorial44")</p>
+      <br>
+      }
+
+
+      @if (ViewBag.hasDatabaseMigrations){
+      <p>@Model.SectionHeaders("DatabaseMigrationsHeader")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial1")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial2")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial3")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial4")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial5")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial6")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial7")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial8")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial9")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial10")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial11")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial12")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial13")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial14")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial15")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial16")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial17")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial18")</p>
+      <p>@Model.SectionHeaders("DatabaseMigrationTutorial19")</p>
+      <br>
+      }
+
       <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
         @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("usesPhotoshopSnippet")</p>}
         @if (ViewBag.usesCsharp){<p>@Model.SectionHeaders("usesCsharpSnippet")</p>}
@@ -73,16 +167,14 @@
         @if (ViewBag.usesMysql){<p>@Model.SectionHeaders("usesMysqlSnippet")</p>}
       <br>
       
-      @* OPTIONAL: BUG STATUS SECTION *@
       @if (ViewBag.hasBugStatusNav){
       <p>@Model.SectionHeaders("bugSectionHeader")</p>
       <br>
       <p>@Model.SectionHeaders("bugOpen")@Model.SectionHeaders("bugStatus")@Model.SectionHeaders("bugMiddle")@Model.SectionHeaders("bugDate")@Model.SectionHeaders("bugClose")</p>
       <br>
       }
-      <br>
 
-      @* CONTRIBUTORS SECTION *@
+      <br>
       <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
       @if (ViewBag.hasAllisonSadin){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
       @if (ViewBag.hasBenWhite){<p>@Model.SectionHeaders("contributorBenWhite")</p>}
@@ -122,13 +214,9 @@
       @if (ViewBag.hasTristanEmmerson){<p>@Model.SectionHeaders("contributorTristanEmmerson")</p>}
       @if (ViewBag.hasTysonLackey){<p>@Model.SectionHeaders("contributorTysonLackey")</p>}
       
-      @* KEYWORD SECTION *@
       <p>@Model.SectionHeaders("keyword1") @Model.SectionHeaders("keyword2") @Model.SectionHeaders("keyword3") @Model.SectionHeaders("keyword4") @Model.SectionHeaders("keyword5") @Model.SectionHeaders("keyword6")</p>
-      
-      @* LICENSE SECTION *@
       <p>@Model.SectionHeaders("mitLicense1")</p>
       <p>@Model.SectionHeaders("mitLicense2")</p>
-      
     </div>
   </div>
   <div class="row">

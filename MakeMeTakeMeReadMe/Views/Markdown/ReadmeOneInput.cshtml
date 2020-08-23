@@ -7,7 +7,6 @@
     <form action="/readmeOneOutput" method="post">
       <div class="row">
 
-        @* meta data *@
         <div class="col-md-6">
           <div class="form-group">
             <label for="title">title</label>
@@ -28,35 +27,22 @@
           
           <div class="form-group">
             <b>Technologies Used: </b><br />
-            <span>{Photoshop: </span><input type="checkbox" name="usesPhotoshop" value="true">}
-            <br>
-            <span>{Vscode: </span><input type="checkbox" name="usesVscode" value="true">}
-            <br>
-            <span>{Mysqlworkbench: <input type="checkbox" name="usesMysql" value="true">}
-            <br>
-            <span>{Javascript: <input type="checkbox" name="usesJavascript" value="true">}
-            <br>
-            <span>{CSS: <input type="checkbox" name="usesCss" value="true">}
-            <br>
-            <span>{Bootstrap: <input type="checkbox" name="usesBootstrap" value="true">}
-            <br>
-            <span>{C#: <input type="checkbox" name="usesCsharp" value="true">}
-            <br>
-            <span>{Swagger: <input type="checkbox" name="usesSwagger" value="true">}
-            <br>
-            <span>{Asp.Net MVC: <input type="checkbox" name="usesAspDotnetMvc" value="true">}
-            <br>
-            <span>{HTML: <input type="checkbox" name="usesHtml" value="true">}
-            <br>
-            <span>{NodeJs: <input type="checkbox" name="usesNodeJs" value="true">}
-            <br>
-            <span>{Webpack: <input type="checkbox" name="usesWebpack" value="true">}
-            <br>
-            <span>{Jquery: <input type="checkbox" name="usesJquery" value="true">}
+            <span>| Photoshop: </span><input type="checkbox" name="usesPhotoshop" value="true">
+            <span>| Vscode: </span><input type="checkbox" name="usesVscode" value="true">
+            <span>| Mysqlworkbench:<input type="checkbox" name="usesMysql" value="true">
+            <span>| Javascript:<input type="checkbox" name="usesJavascript" value="true">    
+            <span>| CSS:<input type="checkbox" name="usesCss" value="true">    
+            <span>| Bootstrap:<input type="checkbox" name="usesBootstrap" value="true">
+            <span>| C#:<input type="checkbox" name="usesCsharp" value="true">
+            <span>| Swagger:<input type="checkbox" name="usesSwagger" value="true">
+            <span>| Asp.Net MVC:<input type="checkbox" name="usesAspDotnetMvc" value="true">
+            <span>| HTML:<input type="checkbox" name="usesHtml" value="true">
+            <span>| NodeJs:<input type="checkbox" name="usesNodeJs" value="true">
+            <span>| Webpack:<input type="checkbox" name="usesWebpack" value="true">
+            <span>| Jquery:<input type="checkbox" name="usesJquery" value="true">
           </div>
         </div>
 
-        @* keywords *@
         <div class="col-md-6">
           <div class="form-group">
             <label for="keyword1">keyword 1</label>
@@ -84,16 +70,30 @@
           </div>
         </div>
         
-        @* empty column *@
         <div class="col-md-6">
-        </div>  
+          <div class="form-group">
+          <b>Requirements: </b><br />
+            <span>Postman: </span><input type="checkbox" name="requiresPostman" value="true">
+            <br>
+            <span>Vscode: </span><input type="checkbox" name="requiresVscode" value="true">
+            <br>
+            <span>MySQL Workbench: <input type="checkbox" name="requiresMysql" value="true">
+            <br>
+            <span>.NET Core: <input type="checkbox" name="requiresDotnetCore" value="true">
+            <br>
+        </div>   
 
+        </div>
         <div class="col-md-6">
           <div class="form-group">
             <b>Optional Setup Sections: </b><br />
             <span><input type="checkbox" name="hasProtectingDataNav" value="true"> Git ignore file handling?</span>
             <span><input type="checkbox" name="hasBugStatusNav" value="true"> Bug Status?</span>
             <span><input type="checkbox" name="hasCloningDataNav" value="true"> Cloning?</span>
+            <span><input type="checkbox" name="hasAppSettings" value="true"> User/PW in appsettings.json?</span>
+            <span><input type="checkbox" name="hasDatabaseMigrations" value="true"> Database creation with Migrations?</span>
+            <span><input type="checkbox" name="hasApiCrudSection" value="true"> Postman API CRUD Requests?</span>
+            <span><input type="checkbox" name="hasSpecificationsDataNav" value="true"> Add specifications section?</span>
           </div>
           <div class="form-group">
             <label for="bugStatus">bug status</label>
