@@ -36,7 +36,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("taglineClose", "*");
 
       //NAVIGATION
-      readmeText.AddText("navigationBar", "<h3 align ='center'><a href='#requirements'>Requirements</a> •<a href='#setup'>Setup</a> •<a href='#technologies-used'>Technologies</a> •<a href='#❤️contributors'>Contributors</a>");
+      readmeText.AddText("navigationBar", "<h3 align ='center'>•<a href='#requirements'> Requirements</a> •<a href='#setup'> Setup</a> •<a href='#technologies-used'> Technologies</a> •<a href='#❤️contributors'> Contributors</a>");
       readmeText.AddText("navClose", "</h3>");
 
       //ABOUT SECTION
