@@ -7,7 +7,8 @@
     <form action="/readmeOneOutput" method="post">
       <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-md-12">
+          <div class="center">
           <div class="form-group">
             <label for="title">title</label>
             <input class="form-control" id="title" name="title" type="text">
@@ -24,7 +25,8 @@
             <label for="about">about section</label>
             <input class="form-control" id="about" name="about" type="text">
           </div>
-          
+          </div>
+
           <div class="form-group">
             <b>Technologies Used: </b><br />
             <span><input type="checkbox" name="usesPhotoshop" value="true"> : Photoshop</span>
@@ -55,7 +57,7 @@
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="form-group">
             <h1>Topics (replace spaces with hyphens)</h1>
             <label for="keyword1">keyword-1</label>
@@ -83,7 +85,7 @@
           </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="form-group">
           <b>Requirements: </b><br />
             <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
@@ -97,13 +99,58 @@
         </div>   
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="form-group">
             <b>Optional Setup Sections: </b><br />
             <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : Git ignore file handling?</span>
-            <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`           <div class="row border">
+            <div class="col-md-4">
             <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
             <br>
+            </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+              <label for="bugDate">bug status date</label>
+              <input class="form-control" id="bugDate" name="bugDate" type="text">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+            <label for="bugStatus">bug status</label>
+            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
+          </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <span><input type="checkbox" name="hasCloningDataNav" value="true"> : Add Cloning?</span>
             <br>
             <span><input type="checkbox" name="hasAppSettings" value="true"> : Add AppSettings.json section?</span>
@@ -116,17 +163,14 @@
             <br>
             <span><input type="checkbox" name="hasPaginationSection" value="true"> : Add Pagination section?</span>
           </div>
-          <div class="form-group">
-            <label for="bugStatus">bug status</label>
-            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
-          </div>
-          <div class="form-group">
-            <label for="bugDate">bug status date</label>
-            <input class="form-control" id="bugDate" name="bugDate" type="text">
-          </div>
 
+
+    
 
         </div>
+
+
+        <div class="row border">
         <div class="col-md-4">
           <div class="form-group">
             <b>Contributors: </b><br />
@@ -154,7 +198,6 @@
             <br>
             <span><input type="checkbox" name="hasFrederickErnest" value="true"> : Frederick Ernest 
             <br>
-
           </div>
         </div>
           <div class="col-md-4">
@@ -184,10 +227,9 @@
             <br>
             <span><input type="checkbox" name="hasMarielHamson" value="true"> : Mariel Hamson
             <br>
-            
           </div>
         </div>
-                  <div class="col-md-4">
+          <div class="col-md-4">
             <div class="form-group">
               <br>
             <span><input type="checkbox" name="hasMeganHepner" value="true"> : Megan Hepner
@@ -216,6 +258,7 @@
             <br>
             <span><input type="checkbox" name="hasTysonLackey" value="true"> : Tyson Lackey   
           </div>
+        </div>
         </div>
       </div>
 

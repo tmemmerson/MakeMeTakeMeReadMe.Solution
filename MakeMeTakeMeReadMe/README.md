@@ -1,83 +1,166 @@
+<h1 align='center'><img width='900' height='450' src='https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/factory.solution.background6.jpg'><br>
 
 
-
-<h1 align="center">
-  <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/hero_images/makemetakemereadme.jpg">
-
-  
-**<h1 align = "center">MakeMeTakeMeReadMe**
+**<h1 align = 'center'>a title**
 
 
+*<h2 align ='center'>THIS IS MY VERY PUNNY TAGLINE*
 
-ABOUT
 
-This project was made for the May 2020 Epicodus Cohort in an effort to make updating and editing the ~100+ repos we have made thus far. This application allows the user to input a projects details in a simple form, and output a well-structured and aesthetically pleasing README.md without getting bogged down in markdown syntax and worrying about uniformity across your repos. 
+<h3 align ='center'>•<a href='#requirements'> Requirements</a> •<a href='#setup'> Setup</a> •<a href='#technologies-used'> Technologies</a> •<a href='#❤️contributors'> Contributors</a> •<a href='#known-bugs'> Bugs</a> •<a href='#app-settings'> AppSettings</a> •<a href='#database-with-migrations'> Database</a> •<a href='#postman-api-requests'> API</a></h3>
 
-# WHERE I GOT YOU
-* You can insert your own hyperlink for your hero-image or, at the bottom of this document are hyperlinks with a brief description.  All images are formatted to 900x450
 
-* I hardcoded your photos and linked-in urls in the "Contributors" section, so if someone likes your work, they can get right to your linked-in.
+<h3 align='center'>about section right here this is the place you need to put text so it looks like you know what you are doing this should be a little longer so I will type some more.</h3>
 
-* A note on the "About" section and the "Keywords": Write a thorough about section and fill in the keywords. Paste the "About" section in the Description area and the "Keywords" in the Topics section as shown below in the picture. This IMMENSELY helps fill out your repo and helps you get found MUCH easier. 
-![MetaData](https://coding-assets.s3-us-west-2.amazonaws.com/img/meta-data-readme.png)
+# **REQUIREMENTS**
+
+_[Postman](https://www.postman.com/)_
+
+_[Visual Studio Code](https://code.visualstudio.com/)_
+
+_[MySql Workbench](https://www.mysql.com/products/workbench/)_
+
+_[.Net Core v2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)_
+
+# **SETUP**
+
+# **APP SETTINGS**
+
+**You need to update your username and password in the appsettings.json file.**
+
+_By default these are set to user:root and an empty password. If you are unsure, refer to the settings for your MySqlWorkbench._
+
+![appsettings](https://coding-assets.s3-us-west-2.amazonaws.com/img/app-settings.png)
 
 <br>
 
-# WHERE I DON'T GOT YOU
-* Members of the cohort who have dropped prior to my starting this project. I love all y'all, but I had to draw the line somewhere. 
-
-* Specifications: I did not add logic for creating your spec table. If your project has specifications, select the checkbox for Specifications to add the Section Header for your Specs, and then use this great resource for making your spec table quickly. [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables)
-
-<br>
 <br>
 
-# HERO IMAGE LINKS
+# **POSTMAN API REQUESTS**
 
-cars/dealership ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Car-Dealership.jpg``
+## TO GET AN ITEM
 
-cats and dogs at rescure ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/AnimalShelter.Solution.jpg``
+* Open Postman
 
-puzzle pieces scattered ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Crypto-Square-Generator.jpg``
+* Set your request to type 'GET'
 
-lorax and factory ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Factory.Solution.jpg``
+* http://localhost:5000/api/items/ (for index of all)
 
-mad libs ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/MadLibs.Solution.jpg``
+* http://localhost:5000/api/items/id (for specific item details)
 
-journal/travel ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/NewFavoriteThings.jpg``
+* Hit Send
 
-letter tiles ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/Scrabble.Solution.jpg``
+## TO ADD AN ITEM
 
-postcard ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/FriendLetter.Solution.jpg``
+* Open Postman
 
-journal/to-do-list/address book ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/TaskList.Solution.jpg``
+* Set your request to type 'POST'
 
-journal/to-do-list/address book ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/address-book.jpg``
+* http://localhost:5000/api/items/
 
-cats at a shelter ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/animal-shelter.jpg``
+* Select Body Tab
 
-bank/currency/money/piggybank ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/banking.jpg``
+* Select Raw Radio Button
 
-cookies ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/cookie-recipe.jpg``
+* Select JSON from dropdown
 
-flashcards ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/flashcards.jpg``
+* Write your addition to the database in the following format
 
-library/book ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/libary.solution.jpg``
+<br>
 
-movies/popcorn ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/movie-tickets.jpg``
+``{itemId: 1, itemName: 'Mark', itemDate: '8/13/2020', itemDetails: 'big''}``
 
-dice/pig-dice ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/pig-dice.jpg``
+* Hit Send
 
-robot/robodgers ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/robo-rodgers.jpg``
+## TO EDIT AN ITEM
 
-triangle tracker ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/triangle.jpg``
+* Open Postman
 
-travel/vacation/favorite things ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/vacation-site.jpg``
+* Make a GET request for the id you wish to edit
 
-wikipedia ``https://coding-assets.s3.us-west-2.amazonaws.com/hero_images/wikipedia-recreation.jpg``
+* http://localhost:5000/api/items/id
+
+* You can select the returned item data and paste that into your request body section for editing.
+
+* Once you have completed your edits.
+
+* Set your request to Put
+
+* Hit Send
+
+## TO DELETE AN ITEM
+
+* Open Postman
+
+* Set your route in Postman to the id you wish to delete
+
+* Set your request to Delete
+
+* Hit Send
+
+<br>
+
+<br>
+
+# **DATABASE WITH MIGRATIONS**
+
+``cd ProjectName``
+
+``dotnet restore``
+
+``dotnet build``
+
+``dotnet ef database update``
+
+``dotnet watch run``
+
+<br>
+
+<br>
+
+# **TECHNOLOGIES USED**
+
+_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_
+
+_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_
+
+_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_
+
+_[Bootstrap](https://getbootstrap.com/)_
+
+_[MySql Workbench](https://www.mysql.com/products/workbench/)_
+
+<br>
+
+<br>
+
+# **KNOWN BUGS**
 
 
+_**no bugs as of:** 8/9/2020_
 
+<br>
 
+<br>
 
+# **❤️Contributors**
 
+| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/allison-sadin.jpeg' width='160px;'/><br /><sub><b>Allison Sadin</b></sub>](https://www.linkedin.com/in/allison-sadin-pdx/)<br />
 
+| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/thomas-glenn.jpeg' width='160px;'/><br /><sub><b>Thomas Glenn</b></sub>](https://www.linkedin.com/in/glennergy/)<br />
+
+| [<img src='https://coding-assets.s3-us-west-2.amazonaws.com/linked-in-images/tristan-emmerson.jpeg' width='160px;'/><br /><sub><b>Tristan Emmerson</b></sub>](https://www.linkedin.com/in/tristan-emmerson/)<br />
+
+<br>
+
+<br>
+
+keyword a keyword 2 keyword three a keyword 4 a keyword 5 k6
+
+<br>
+
+<br>
+
+![alt text][logo]
+
+[logo]: https://img.shields.io/bower/l/bootstrap 'MIT License'
