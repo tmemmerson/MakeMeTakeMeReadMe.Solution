@@ -2,98 +2,201 @@
   Layout = "_Layout";
 }
 
-  <div class="jumbotron">
+  <div class="jumbotron tiny">
     <h1>MakeMeTakeMeReadMe</h1>
 
   </div>
   <div class="row">
     <div class="col-lg-6">
-      <p>@Model.SectionHeaders("heroOpen")@Model.SectionHeaders("heroURL")@Model.SectionHeaders("heroClose")</p>
+      <p>@Model.MarkdownPiece("heroOpen")@Model.MarkdownPiece("heroURL")@Model.MarkdownPiece("heroClose")</p>
       <br>
-      <p>@Model.SectionHeaders("titleOpen")@Model.SectionHeaders("title")@Model.SectionHeaders("titleClose")</p>
+      <p>@Model.MarkdownPiece("titleOpen")@Model.MarkdownPiece("title")@Model.MarkdownPiece("titleClose")</p>
       <br>
-      <p>@Model.SectionHeaders("taglineOpen")@Model.SectionHeaders("tagline")@Model.SectionHeaders("taglineClose")</p>
+      <p>@Model.MarkdownPiece("taglineOpen")@Model.MarkdownPiece("tagline")@Model.MarkdownPiece("taglineClose")</p>
       <br>
-      <p>@Model.SectionHeaders("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.SectionHeaders("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.SectionHeaders("hasProtectingDataNav")}@Model.SectionHeaders("navClose")</p>
+      <p>@Model.MarkdownPiece("navigationBar")@if (ViewBag.hasBugStatusNav){@Model.MarkdownPiece("hasBugStatusNav")}@if (ViewBag.hasProtectingDataNav){@Model.MarkdownPiece("hasProtectingDataNav")}@if (ViewBag.hasSpecificationsDataNav){@Model.MarkdownPiece("hasSpecificationsDataNav")}@if (ViewBag.hasCloningDataNav){@Model.MarkdownPiece("hasCloningDataNav")}@if (ViewBag.hasAppSettings){@Model.MarkdownPiece("hasAppSettings")}@if (ViewBag.hasDatabaseMigrations){@Model.MarkdownPiece("hasDatabaseMigrations")}@if (ViewBag.hasApiCrudSection){@Model.MarkdownPiece("hasApiCrudSection")}@Model.MarkdownPiece("navClose")</p>
       <br>
-      <p>@Model.SectionHeaders("aboutOpen")@Model.SectionHeaders("about")@Model.SectionHeaders("aboutClose")</p>
-      <br>
-      <p>@Model.SectionHeaders("requirementSectionHeader")</p>
-      <br>
-      <p>@Model.SectionHeaders("protectionSectionHeader")</p>
-      <br>
-      <p>@Model.SectionHeaders("setupSectionHeader")</p>
-      <br>
-      <p>@Model.SectionHeaders("technologiesSectionHeader")</p>
+      <p>@Model.MarkdownPiece("aboutOpen")@Model.MarkdownPiece("about")@Model.MarkdownPiece("aboutClose")</p>
 
-        @if (ViewBag.usesPhotoshop){<p>@Model.SectionHeaders("usesPhotoshopSnippet")</p>}
-        @if (ViewBag.usesCsharp){<p>@Model.SectionHeaders("usesCsharpSnippet")</p>}
-        @if (ViewBag.usesJavascript){<p>@Model.SectionHeaders("usesJavascriptSnippet")</p>}
-        @if (ViewBag.usesCss){<p>@Model.SectionHeaders("usesCssSnippet")</p>}
-        @if (ViewBag.usesBootstrap){<p>@Model.SectionHeaders("usesBootstrapSnippet")</p>}
-        @if (ViewBag.usesSwagger){<p>@Model.SectionHeaders("usesSwaggerSnippet")</p>}
-        @if (ViewBag.usesAspDotnetMvc){<p>@Model.SectionHeaders("usesAspDotnetMvcSnippet")</p>}
-        @if (ViewBag.usesHtml){<p>@Model.SectionHeaders("usesHtmlSnippet")</p>}
-        @if (ViewBag.usesNodeJs){<p>@Model.SectionHeaders("usesNodeJsSnippet")</p>}
-        @if (ViewBag.usesWebpack){<p>@Model.SectionHeaders("usesWebpackSnippet")</p>}
-        @if (ViewBag.usesJquery){<p>@Model.SectionHeaders("usesJquerySnippet")</p>}
-        @if (ViewBag.usesVscode){<p>@Model.SectionHeaders("usesVscodeSnippet")</p>}
-        @if (ViewBag.usesMysql){<p>@Model.SectionHeaders("usesMysqlSnippet")</p>}
-      <br>
+      @if (ViewBag.hasSpecificationsDataNav){
+      <p>@Model.MarkdownPiece("specificationsSectionHeader")</p>   
+      <p>insert your markdown table from [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) right here!</p>
+      }
+
+      <p>@Model.MarkdownPiece("requirementSectionHeader")</p>
+      @if (ViewBag.requiresPostman){
+        <p>@Model.MarkdownPiece("requiresPostman")</p>
+      }
+      @if (ViewBag.requiresVscode){
+        <p>@Model.MarkdownPiece("requiresVscode")</p>
+      }
+      @if (ViewBag.requiresMysql){
+        <p>@Model.MarkdownPiece("requiresMysql")</p>
+      }
+      @if (ViewBag.requiresDotnetCore){
+        <p>@Model.MarkdownPiece("requiresDotnetCore")</p>
+      }
+
+      <p>@Model.MarkdownPiece("setupSectionHeader")</p>
+      
+      @if (ViewBag.hasCloningDataNav){
+      <p>@Model.MarkdownPiece("cloningSectionHeader")</p>
+      <p>@Model.MarkdownPiece("cloningTutorial1")</p>
+      <p>@Model.MarkdownPiece("cloningTutorial2")</p>  
+      <p>@Model.MarkdownPiece("cloningTutorial3")</p>
+      <p>@Model.MarkdownPiece("cloningTutorial4")</p>
+      <p>@Model.MarkdownPiece("cloningTutorial5")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>   
+      }
+
+      @if (ViewBag.hasAppSettings){
+      <p>@Model.MarkdownPiece("AppSettingsHeader")</p>
+      <p>@Model.MarkdownPiece("appSettingsTutorial1")</p>
+      <p>@Model.MarkdownPiece("appSettingsTutorial2")</p>
+      <p>@Model.MarkdownPiece("appSettingsTutorial3")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+
+      @if (ViewBag.hasProtectingDataNav){
+      <p>@Model.MarkdownPiece("protectionSectionHeader")</p>
+      <p>@Model.MarkdownPiece("protectionTutorial1")</p>
+      <p>@Model.MarkdownPiece("protectionTutorial2")</p>  
+      <p>@Model.MarkdownPiece("protectionTutorial3")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+
+      @if (ViewBag.hasApiCrudSection){
+      <p>@Model.MarkdownPiece("ApiCrudHeader")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial1")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial2")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial3")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial4")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial5")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial6")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial7")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial8")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial9")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial10")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial11")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial12")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial13")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial14")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial15")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial18")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial26")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial27")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial28")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial29")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial30")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial31")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial32")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial33")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial34")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial35")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial36")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial37")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial38")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial39")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+
+      @if (ViewBag.hasPaginationSection){
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial40")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial41")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial42")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial43")</p>
+      <p>@Model.MarkdownPiece("ApiCrudTutorial44")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+
+      @if (ViewBag.hasDatabaseMigrations){
+      <p>@Model.MarkdownPiece("DatabaseMigrationsHeader")</p>
+      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial2")</p>
+      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial6")</p>
+      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial10")</p>
+      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial14")</p>
+      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial18")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+
+      <p>@Model.MarkdownPiece("technologiesSectionHeader")</p>
+      @if (ViewBag.usesPhotoshop){<p>@Model.MarkdownPiece("usesPhotoshopSnippet")</p>}
+      @if (ViewBag.usesCsharp){<p>@Model.MarkdownPiece("usesCsharpSnippet")</p>}
+      @if (ViewBag.usesJavascript){<p>@Model.MarkdownPiece("usesJavascriptSnippet")</p>}
+      @if (ViewBag.usesCss){<p>@Model.MarkdownPiece("usesCssSnippet")</p>}
+      @if (ViewBag.usesBootstrap){<p>@Model.MarkdownPiece("usesBootstrapSnippet")</p>}
+      @if (ViewBag.usesSwagger){<p>@Model.MarkdownPiece("usesSwaggerSnippet")</p>}
+      @if (ViewBag.usesAspDotnetMvc){<p>@Model.MarkdownPiece("usesAspDotnetMvcSnippet")</p>}
+      @if (ViewBag.usesHtml){<p>@Model.MarkdownPiece("usesHtmlSnippet")</p>}
+      @if (ViewBag.usesNodeJs){<p>@Model.MarkdownPiece("usesNodeJsSnippet")</p>}
+      @if (ViewBag.usesWebpack){<p>@Model.MarkdownPiece("usesWebpackSnippet")</p>}
+      @if (ViewBag.usesJquery){<p>@Model.MarkdownPiece("usesJquerySnippet")</p>}
+      @if (ViewBag.usesVscode){<p>@Model.MarkdownPiece("usesVscodeSnippet")</p>}
+      @if (ViewBag.usesMysql){<p>@Model.MarkdownPiece("usesMysqlSnippet")</p>}
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
       
       @if (ViewBag.hasBugStatusNav){
-      <p>@Model.SectionHeaders("bugSectionHeader")</p>
+      <p>@Model.MarkdownPiece("bugSectionHeader")</p>
       <br>
-      <p>@Model.SectionHeaders("bugOpen")@Model.SectionHeaders("bugStatus")@Model.SectionHeaders("bugMiddle")@Model.SectionHeaders("bugDate")@Model.SectionHeaders("bugClose")</p>
-      <br>
+      <p>@Model.MarkdownPiece("bugOpen")@Model.MarkdownPiece("bugStatus")@Model.MarkdownPiece("bugMiddle")@Model.MarkdownPiece("bugDate")@Model.MarkdownPiece("bugClose")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
-      @if (ViewBag.hasCloningDataNav){
-      <p>@Model.SectionHeaders("cloningSectionHeader")</p>
-      <br>
-      }
-      <br>
-      <p>@Model.SectionHeaders("contributorsSectionHeader")</p>
-      @if (ViewBag.hasAllisonSadin){<p>@Model.SectionHeaders("contributorAllisonSadin")</p>}
-      @if (ViewBag.hasBenWhite){<p>@Model.SectionHeaders("contributorBenWhite")</p>}
-      @if (ViewBag.hasBenRussell){<p>@Model.SectionHeaders("contributorBenRussell")</p>}
-      @if (ViewBag.hasBeverlyPotts){<p>@Model.SectionHeaders("contributorBeverlyPotts")</p>}
-      @if (ViewBag.hasBrittanyLindgren){<p>@Model.SectionHeaders("contributorBrittanyLindgren")</p>}
-      @if (ViewBag.hasChristineAugustine){<p>@Model.SectionHeaders("contributorChristineAugustine")</p>}
-      @if (ViewBag.hasChrisYoon){<p>@Model.SectionHeaders("contributorChrisYoon")</p>}
-      @if (ViewBag.hasCodyFritz){<p>@Model.SectionHeaders("contributorCodyFritz")</p>}
-      @if (ViewBag.hasDeryckJackson){<p>@Model.SectionHeaders("contributorDeryckJackson")</p>}
-      @if (ViewBag.hasErichRichter){<p>@Model.SectionHeaders("contributorErichRichter")</p>}
-      @if (ViewBag.hasEvgeniyaChernaya){<p>@Model.SectionHeaders("contributorEvgeniyaChernaya")</p>}
-      @if (ViewBag.hasFrederickErnest){<p>@Model.SectionHeaders("contributorFrederickErnest")</p>}
-      @if (ViewBag.hasHannahBeinstein){<p>@Model.SectionHeaders("contributorHannahBeinstein")</p>}
-      @if (ViewBag.hasIanGregg){<p>@Model.SectionHeaders("contributorIanGregg")</p>}
-      @if (ViewBag.hasIanScott){<p>@Model.SectionHeaders("contributorIanScott")</p>}
-      @if (ViewBag.hasJamesHenager){<p>@Model.SectionHeaders("contributorJamesHenager")</p>}
-      @if (ViewBag.hasJasonKhan){<p>@Model.SectionHeaders("contributorJasonKhan")</p>}
-      @if (ViewBag.hasJeffreyKim){<p>@Model.SectionHeaders("contributorJeffreyKim")</p>}
-      @if (ViewBag.hasJohnNilsOlson){<p>@Model.SectionHeaders("contributorJohnNilsOlson")</p>}
-      @if (ViewBag.hasJosephPearce){<p>@Model.SectionHeaders("contributorJosephPearce")</p>}
-      @if (ViewBag.hasKateSkorija){<p>@Model.SectionHeaders("contributorKateSkorija")</p>}
-      @if (ViewBag.hasKevinDavis){<p>@Model.SectionHeaders("contributorKevinDavis")</p>}
-      @if (ViewBag.hasKyleHubbard){<p>@Model.SectionHeaders("contributorKyleHubbard")</p>}
-      @if (ViewBag.hasMarielHamson){<p>@Model.SectionHeaders("contributorMarielHamson")</p>}
-      @if (ViewBag.hasMeganHepner){<p>@Model.SectionHeaders("contributorMeganHepner")</p>}
-      @if (ViewBag.hasMichealHansen){<p>@Model.SectionHeaders("contributorMichealHansen")</p>}
-      @if (ViewBag.hasNoelKirkland){<p>@Model.SectionHeaders("contributorNoelKirkland")</p>}
-      @if (ViewBag.hasPeterGrimm){<p>@Model.SectionHeaders("contributorPeterGrimm")</p>}
-      @if (ViewBag.hasSaraKane){<p>@Model.SectionHeaders("contributorSaraKane")</p>}
-      @if (ViewBag.hasSeanDowns){<p>@Model.SectionHeaders("contributorSeanDowns")</p>}
-      @if (ViewBag.hasSpencerMoody){<p>@Model.SectionHeaders("contributorSpencerMoody")</p>}
-      @if (ViewBag.hasTaylorPhillips){<p>@Model.SectionHeaders("contributorTaylorPhillips")</p>}
-      @if (ViewBag.hasTaylorSomers){<p>@Model.SectionHeaders("contributorTaylorSomers")</p>}
-      @if (ViewBag.hasTeresaRosinksi){<p>@Model.SectionHeaders("contributorTeresaRosinksi")</p>}
-      @if (ViewBag.hasThomasGlenn){<p>@Model.SectionHeaders("contributorThomasGlenn")</p>}
-      @if (ViewBag.hasTristanEmmerson){<p>@Model.SectionHeaders("contributorTristanEmmerson")</p>}
-      @if (ViewBag.hasTysonLackey){<p>@Model.SectionHeaders("contributorTysonLackey")</p>}
-      
-      <p>#@Model.SectionHeaders("keyword1"), #@Model.SectionHeaders("keyword2"), #@Model.SectionHeaders("keyword3"), #@Model.SectionHeaders("keyword4"), #@Model.SectionHeaders("keyword5"), #@Model.SectionHeaders("keyword6")</p>
-    
+      <p>@Model.MarkdownPiece("contributorsSectionHeader")</p>
+      @if (ViewBag.hasAllisonSadin){<p>@Model.MarkdownPiece("contributorAllisonSadin")</p>}
+      @if (ViewBag.hasBenWhite){<p>@Model.MarkdownPiece("contributorBenWhite")</p>}
+      @if (ViewBag.hasBenRussell){<p>@Model.MarkdownPiece("contributorBenRussell")</p>}
+      @if (ViewBag.hasBeverlyPotts){<p>@Model.MarkdownPiece("contributorBeverlyPotts")</p>}
+      @if (ViewBag.hasBrittanyLindgren){<p>@Model.MarkdownPiece("contributorBrittanyLindgren")</p>}
+      @if (ViewBag.hasChristineAugustine){<p>@Model.MarkdownPiece("contributorChristineAugustine")</p>}
+      @if (ViewBag.hasChrisYoon){<p>@Model.MarkdownPiece("contributorChrisYoon")</p>}
+      @if (ViewBag.hasCodyFritz){<p>@Model.MarkdownPiece("contributorCodyFritz")</p>}
+      @if (ViewBag.hasDeryckJackson){<p>@Model.MarkdownPiece("contributorDeryckJackson")</p>}
+      @if (ViewBag.hasErichRichter){<p>@Model.MarkdownPiece("contributorErichRichter")</p>}
+      @if (ViewBag.hasEvgeniyaChernaya){<p>@Model.MarkdownPiece("contributorEvgeniyaChernaya")</p>}
+      @if (ViewBag.hasFrederickErnest){<p>@Model.MarkdownPiece("contributorFrederickErnest")</p>}
+      @if (ViewBag.hasHannahBeinstein){<p>@Model.MarkdownPiece("contributorHannahBeinstein")</p>}
+      @if (ViewBag.hasIanGregg){<p>@Model.MarkdownPiece("contributorIanGregg")</p>}
+      @if (ViewBag.hasIanScott){<p>@Model.MarkdownPiece("contributorIanScott")</p>}
+      @if (ViewBag.hasJamesHenager){<p>@Model.MarkdownPiece("contributorJamesHenager")</p>}
+      @if (ViewBag.hasJasonKhan){<p>@Model.MarkdownPiece("contributorJasonKhan")</p>}
+      @if (ViewBag.hasJeffreyKim){<p>@Model.MarkdownPiece("contributorJeffreyKim")</p>}
+      @if (ViewBag.hasJohnNilsOlson){<p>@Model.MarkdownPiece("contributorJohnNilsOlson")</p>}
+      @if (ViewBag.hasJosephPearce){<p>@Model.MarkdownPiece("contributorJosephPearce")</p>}
+      @if (ViewBag.hasKateSkorija){<p>@Model.MarkdownPiece("contributorKateSkorija")</p>}
+      @if (ViewBag.hasKevinDavis){<p>@Model.MarkdownPiece("contributorKevinDavis")</p>}
+      @if (ViewBag.hasKyleHubbard){<p>@Model.MarkdownPiece("contributorKyleHubbard")</p>}
+      @if (ViewBag.hasMarielHamson){<p>@Model.MarkdownPiece("contributorMarielHamson")</p>}
+      @if (ViewBag.hasMeganHepner){<p>@Model.MarkdownPiece("contributorMeganHepner")</p>}
+      @if (ViewBag.hasMichealHansen){<p>@Model.MarkdownPiece("contributorMichealHansen")</p>}
+      @if (ViewBag.hasNoelKirkland){<p>@Model.MarkdownPiece("contributorNoelKirkland")</p>}
+      @if (ViewBag.hasPeterGrimm){<p>@Model.MarkdownPiece("contributorPeterGrimm")</p>}
+      @if (ViewBag.hasSaraKane){<p>@Model.MarkdownPiece("contributorSaraKane")</p>}
+      @if (ViewBag.hasSeanDowns){<p>@Model.MarkdownPiece("contributorSeanDowns")</p>}
+      @if (ViewBag.hasSpencerMoody){<p>@Model.MarkdownPiece("contributorSpencerMoody")</p>}
+      @if (ViewBag.hasTaylorPhillips){<p>@Model.MarkdownPiece("contributorTaylorPhillips")</p>}
+      @if (ViewBag.hasTaylorSomers){<p>@Model.MarkdownPiece("contributorTaylorSomers")</p>}
+      @if (ViewBag.hasTeresaRosinksi){<p>@Model.MarkdownPiece("contributorTeresaRosinksi")</p>}
+      @if (ViewBag.hasThomasGlenn){<p>@Model.MarkdownPiece("contributorThomasGlenn")</p>}
+      @if (ViewBag.hasTristanEmmerson){<p>@Model.MarkdownPiece("contributorTristanEmmerson")</p>}
+      @if (ViewBag.hasTysonLackey){<p>@Model.MarkdownPiece("contributorTysonLackey")</p>}
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>    
+      <p>@Model.MarkdownPiece("keyword1") @Model.MarkdownPiece("keyword2") @Model.MarkdownPiece("keyword3") @Model.MarkdownPiece("keyword4") @Model.MarkdownPiece("keyword5") @Model.MarkdownPiece("keyword6")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      <p>@Model.MarkdownPiece("mitLicense1")</p>
+      <p>@Model.MarkdownPiece("mitLicense2")</p>
     </div>
   </div>
   <div class="row">

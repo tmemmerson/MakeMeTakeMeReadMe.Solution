@@ -6,7 +6,9 @@
   <div class="container">
     <form action="/readmeOneOutput" method="post">
       <div class="row">
-        <div class="col-md-6">
+
+        <div class="col-md-12">
+          <div class="center">
           <div class="form-group">
             <label for="title">title</label>
             <input class="form-control" id="title" name="title" type="text">
@@ -15,117 +17,250 @@
             <label for="tagline">tagline</label>
             <input class="form-control" id="tagline" name="tagline" type="text">
           </div>
+            <div class="form-group">
+            <label for="heroURL">hero url (see documentation for stocks)</label>
+            <input class="form-control" id="heroURL" name="heroURL" type="text">
+          </div>
           <div class="form-group">
             <label for="about">about section</label>
             <input class="form-control" id="about" name="about" type="text">
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="keyword1">keyword 1</label>
-            <input class="form-control" id="keyword1" name="keyword1" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword2">keyword 2</label>
-            <input class="form-control" id="keyword2" name="keyword2" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword3">keyword 3</label>
-            <input class="form-control" id="keyword3" name="keyword3" type="text">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="keyword4">keyword 4</label>
-            <input class="form-control" id="keyword4" name="keyword4" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword5">keyword 5</label>
-            <input class="form-control" id="keyword5" name="keyword5" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword6">keyword 6</label>
-            <input class="form-control" id="keyword6" name="keyword6" type="text">
-          </div>
-        </div>  
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="heroURL">hero url (see documentation for stocks)</label>
-            <input class="form-control" id="heroURL" name="heroURL" type="text">
-          </div>
-          
-          <div class="form-group">
-            <span>| Add Data Protection Section? </span><input type="checkbox" name="hasProtectingDataNav" value="true">
-            <span>| Add Bug Status? </span><input type="checkbox" name="hasBugStatusNav" value="true">
-            <span>| Add Section on Cloning? </span><input type="checkbox" name="hasCloningDataNav" value="true">
-          </div>
-          <div class="form-group">
-            <label for="bugStatus">bug status</label>
-            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
-          </div>
-          <div class="form-group">
-            <label for="bugDate">bug status date</label>
-            <input class="form-control" id="bugDate" name="bugDate" type="text">
           </div>
 
           <div class="form-group">
             <b>Technologies Used: </b><br />
-            <span>| Photoshop: </span><input type="checkbox" name="usesPhotoshop" value="true">
-            <span>| Vscode: </span><input type="checkbox" name="usesVscode" value="true">
-            <span>| Mysqlworkbench:<input type="checkbox" name="usesMysql" value="true">
-            <span>| Javascript:<input type="checkbox" name="usesJavascript" value="true">    
-            <span>| CSS:<input type="checkbox" name="usesCss" value="true">    
-            <span>| Bootstrap:<input type="checkbox" name="usesBootstrap" value="true">
-            <span>| C#:<input type="checkbox" name="usesCsharp" value="true">
-            <span>| Swagger:<input type="checkbox" name="usesSwagger" value="true">
-            <span>| Asp.Net MVC:<input type="checkbox" name="usesAspDotnetMvc" value="true">
-            <span>| HTML:<input type="checkbox" name="usesHtml" value="true">
-            <span>| NodeJs:<input type="checkbox" name="usesNodeJs" value="true">
-            <span>| Webpack:<input type="checkbox" name="usesWebpack" value="true">
-            <span>| Jquery:<input type="checkbox" name="usesJquery" value="true">
+            <span><input type="checkbox" name="usesPhotoshop" value="true"> : Photoshop</span>
+            <br>
+            <span><input type="checkbox" name="usesVscode" value="true"> : Vscode</span>
+            <br>
+            <span><input type="checkbox" name="usesMysql" value="true"> : Mysqlworkbench</span>
+            <br>
+            <span><input type="checkbox" name="usesJavascript" value="true"> : Javascript</span>
+            <br>
+            <span><input type="checkbox" name="usesCss" value="true"> : CSS</span>
+            <br>
+            <span><input type="checkbox" name="usesBootstrap" value="true"> : Bootstrap</span>
+            <br>
+            <span><input type="checkbox" name="usesCsharp" value="true"> : C#</span>
+            <br>
+            <span><input type="checkbox" name="usesSwagger" value="true"> : Swagger</span>
+            <br>
+            <span><input type="checkbox" name="usesAspDotnetMvc" value="true"> : Asp.Net MVC</span>
+            <br>
+            <span><input type="checkbox" name="usesHtml" value="true"> : HTML</span>
+            <br>
+            <span><input type="checkbox" name="usesNodeJs" value="true"> : NodeJs</span>
+            <br>
+            <span><input type="checkbox" name="usesWebpack" value="true"> : Webpack</span>
+            <br>
+            <span><input type="checkbox" name="usesJquery" value="true"> : Jquery</span>
           </div>
         </div>
-        <div class="form-group">
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <h1>Topics (replace spaces with hyphens)</h1>
+            <label for="keyword1">keyword-1</label>
+            <input class="form-control" id="keyword1" name="keyword1" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword2">keyword-2</label>
+            <input class="form-control" id="keyword2" name="keyword2" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword3">keyword-3</label>
+            <input class="form-control" id="keyword3" name="keyword3" type="text">
+          </div>
+            <div class="form-group">
+            <label for="keyword4">keyword-4</label>
+            <input class="form-control" id="keyword4" name="keyword4" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword5">keyword-5</label>
+            <input class="form-control" id="keyword5" name="keyword5" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword6">keyword-6</label>
+            <input class="form-control" id="keyword6" name="keyword6" type="text">
+          </div>
+        </div>
+        
+        <div class="col-md-12">
+          <div class="form-group">
+          <b>Requirements: </b><br />
+            <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
+            <br>
+            <span><input type="checkbox" name="requiresVscode" value="true"> : Vscode</span>
+            <br>
+            <span><input type="checkbox" name="requiresMysql" value="true"> : MySQL Workbench</span>
+            <br>
+            <span><input type="checkbox" name="requiresDotnetCore" value="true"> : .NET Core</span>
+            <br>
+        </div>   
+
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <b>Optional Setup Sections: </b><br />
+            <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : Git ignore file handling?</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`           <div class="row border">
+            <div class="col-md-4">
+            <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
+            <br>
+            </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+              <label for="bugDate">bug status date</label>
+              <input class="form-control" id="bugDate" name="bugDate" type="text">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+            <label for="bugStatus">bug status</label>
+            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
+          </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <span><input type="checkbox" name="hasCloningDataNav" value="true"> : Add Cloning?</span>
+            <br>
+            <span><input type="checkbox" name="hasAppSettings" value="true"> : Add AppSettings.json section?</span>
+            <br>
+            <span><input type="checkbox" name="hasDatabaseMigrations" value="true"> : Database with Migrations?</span>
+            <br>
+            <span><input type="checkbox" name="hasApiCrudSection" value="true"> : Postman API CRUD Requests?</span>
+            <br>
+            <span><input type="checkbox" name="hasSpecificationsDataNav" value="true"> : Add Specifications section?</span>
+            <br>
+            <span><input type="checkbox" name="hasPaginationSection" value="true"> : Add Pagination section?</span>
+          </div>
+
+
+    
+
+        </div>
+
+
+        <div class="row border">
+        <div class="col-md-4">
+          <div class="form-group">
             <b>Contributors: </b><br />
-            <span>| Allison Sadin: <input type="checkbox" name="hasAllisonSadin" value="true">
-            <span>| Ben White: <input type="checkbox" name="hasBenWhite" value="true">
-            <span>| Ben Russell: <input type="checkbox" name="hasBenRussell" value="true">
-            <span>| Beverly Potts: <input type="checkbox" name="hasBeverlyPotts" value="true">
-            <span>| Brittany Lindgren: <input type="checkbox" name="hasBrittanyLindgren" value="true">
-            <span>| Christine Augustine: <input type="checkbox" name="hasChristineAugustine" value="true">
-            <span>| Chris Yoon: <input type="checkbox" name="hasChrisYoon" value="true">
-            <span>| Cody Fritz: <input type="checkbox" name="hasCodyFritz" value="true">
-            <span>| Deryck Jackson: <input type="checkbox" name="hasDeryckJackson" value="true">
-            <span>| Erich Richter: <input type="checkbox" name="hasErichRichter" value="true">
-            <span>| Evgeniya Chernaya: <input type="checkbox" name="hasEvgeniyaChernaya" value="true">
-            <span>| Frederick Ernest: <input type="checkbox" name="hasFrederickErnest" value="true">
-            <span>| Hannah Beinstein: <input type="checkbox" name="hasHannahBeinstein" value="true">
-            <span>| Ian Gregg: <input type="checkbox" name="hasIanGregg" value="true">
-            <span>| Ian Scott: <input type="checkbox" name="hasIanScott" value="true">
-            <span>| James Henager: <input type="checkbox" name="hasJamesHenager" value="true">
-            <span>| Jason Khan: <input type="checkbox" name="hasJasonKhan" value="true">
-            <span>| Jeffrey Kim: <input type="checkbox" name="hasJeffreyKim" value="true">
-            <span>| JohnNils Olson: <input type="checkbox" name="hasJohnNilsOlson" value="true">
-            <span>| Joseph Pearce: <input type="checkbox" name="hasJosephPearce" value="true">
-            <span>| Kate Skorija: <input type="checkbox" name="hasKateSkorija" value="true">
-            <span>| Kevin Davis: <input type="checkbox" name="hasKevinDavis" value="true">
-            <span>| Kyle Hubbard: <input type="checkbox" name="hasKyleHubbard" value="true">
-            <span>| Mariel Hamson: <input type="checkbox" name="hasMarielHamson" value="true">
-            <span>| Megan Hepner: <input type="checkbox" name="hasMeganHepner" value="true">
-            <span>| Micheal Hansen: <input type="checkbox" name="hasMichealHansen" value="true">
-            <span>| Noel Kirkland: <input type="checkbox" name="hasNoelKirkland" value="true">
-            <span>| Peter Grimm: <input type="checkbox" name="hasPeterGrimm" value="true">
-            <span>| Sara Kane: <input type="checkbox" name="hasSaraKane" value="true">
-            <span>| Sean Downs: <input type="checkbox" name="hasSeanDowns" value="true">
-            <span>| Spencer Moody: <input type="checkbox" name="hasSpencerMoody" value="true">
-            <span>| Taylor Phillips: <input type="checkbox" name="hasTaylorPhillips" value="true">
-            <span>| Taylor Somers: <input type="checkbox" name="hasTaylorSomers" value="true">
-            <span>| Teresa Rosinksi: <input type="checkbox" name="hasTeresaRosinksi" value="true">
-            <span>| Thomas Glenn: <input type="checkbox" name="hasThomasGlenn" value="true">
-            <span>| Tristan Emmerson: <input type="checkbox" name="hasTristanEmmerson" value="true">
-            <span>| Tyson Lackey: <input type="checkbox" name="hasTysonLackey" value="true">    
+            <span><input type="checkbox" name="hasAllisonSadin" value="true"> : Allison Sadin
+            <br>
+            <span><input type="checkbox" name="hasBenWhite" value="true"> : Ben White
+            <br>
+            <span><input type="checkbox" name="hasBenRussell" value="true"> : Ben Russell
+            <br>
+            <span><input type="checkbox" name="hasBeverlyPotts" value="true"> : Beverly Potts
+            <br>
+            <span><input type="checkbox" name="hasBrittanyLindgren" value="true"> : Brittany Lindgren
+            <br>
+            <span><input type="checkbox" name="hasChristineAugustine" value="true"> : Christine Augustine
+            <br>
+            <span><input type="checkbox" name="hasChrisYoon" value="true"> : Chris Yoon
+            <br>
+            <span><input type="checkbox" name="hasCodyFritz" value="true"> : Cody Fritz 
+            <br>
+            <span><input type="checkbox" name="hasDeryckJackson" value="true"> : Deryck Jackson
+            <br>
+            <span><input type="checkbox" name="hasErichRichter" value="true"> : Erich Richter
+            <br>
+            <span><input type="checkbox" name="hasEvgeniyaChernaya" value="true"> : Evgeniya Chernaya
+            <br>
+            <span><input type="checkbox" name="hasFrederickErnest" value="true"> : Frederick Ernest 
+            <br>
           </div>
         </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <br>
+            <span><input type="checkbox" name="hasHannahBeinstein" value="true"> : Hannah Beinstein
+            <br>
+            <span><input type="checkbox" name="hasIanGregg" value="true"> : Ian Gregg
+            <br>
+            <span><input type="checkbox" name="hasIanScott" value="true"> : Ian Scott
+            <br>
+            <span><input type="checkbox" name="hasJamesHenager" value="true"> : James Henager
+            <br>
+            <span><input type="checkbox" name="hasJasonKhan" value="true"> : Jason Khan
+            <br>
+            <span><input type="checkbox" name="hasJeffreyKim" value="true"> : Jeffrey Kim
+            <br>
+            <span><input type="checkbox" name="hasJohnNilsOlson" value="true"> : JohnNils Olson
+            <br>
+            <span><input type="checkbox" name="hasJosephPearce" value="true"> : Joseph Pearce
+            <br>
+            <span><input type="checkbox" name="hasKateSkorija" value="true"> : Kate Skorija
+            <br>
+            <span><input type="checkbox" name="hasKevinDavis" value="true"> : Kevin Davis
+            <br>
+            <span><input type="checkbox" name="hasKyleHubbard" value="true"> : Kyle Hubbard
+            <br>
+            <span><input type="checkbox" name="hasMarielHamson" value="true"> : Mariel Hamson
+            <br>
+          </div>
+        </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <br>
+            <span><input type="checkbox" name="hasMeganHepner" value="true"> : Megan Hepner
+            <br>
+            <span><input type="checkbox" name="hasMichealHansen" value="true"> : Micheal Hansen
+            <br>
+            <span><input type="checkbox" name="hasNoelKirkland" value="true"> : Noel Kirkland
+            <br>
+            <span><input type="checkbox" name="hasPeterGrimm" value="true"> : Peter Grimm
+            <br>
+            <span><input type="checkbox" name="hasSaraKane" value="true"> : Sara Kane
+            <br>
+            <span><input type="checkbox" name="hasSeanDowns" value="true"> : Sean Downs
+            <br>
+            <span><input type="checkbox" name="hasSpencerMoody" value="true"> : Spencer Moody
+            <br>
+            <span><input type="checkbox" name="hasTaylorPhillips" value="true"> : Taylor Phillips
+            <br>
+            <span><input type="checkbox" name="hasTaylorSomers" value="true"> : Taylor Somers
+            <br>
+            <span><input type="checkbox" name="hasTeresaRosinksi" value="true"> : Teresa Rosinksi
+            <br>
+            <span><input type="checkbox" name="hasThomasGlenn" value="true"> : Thomas Glenn
+            <br>
+            <span><input type="checkbox" name="hasTristanEmmerson" value="true"> : Tristan Emmerson
+            <br>
+            <span><input type="checkbox" name="hasTysonLackey" value="true"> : Tyson Lackey   
+          </div>
+        </div>
+        </div>
+      </div>
 
       </div>
       <div class="row">

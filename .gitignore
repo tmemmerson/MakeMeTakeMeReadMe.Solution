@@ -1,6 +1,4 @@
-obj/
-bin/
-.env
-dist/
+*/bin/
+*/obj/
 .DS_Store
-node_modules/
+.vscode
