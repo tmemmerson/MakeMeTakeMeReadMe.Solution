@@ -38,7 +38,7 @@ p {
 label {
   color: rgb(255, 255, 255);
   font-family: 'Orbitron', sans-serif;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .space {
@@ -85,7 +85,7 @@ div#footer {
 
 .border {
   border: 1px dotted black;
-  margin: 15px;
+  margin: 5px;
 }
 
 .form-control {

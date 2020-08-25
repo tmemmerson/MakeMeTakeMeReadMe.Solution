@@ -72,7 +72,9 @@ namespace MakeMeTakeMeReadMe.Models
     public bool requiresPostman { get; set; } 
     public bool requiresVscode { get; set; }
     public bool requiresMysql { get; set; } 
-    public bool requiresDotnetCore { get; set; } 
+    public bool requiresDotnetCore { get; set; }
+    public bool hasNpmInstall { get; set; }
+    public bool hasDotnetInstall { get; set; }
   
     public string MarkdownPiece(string key)
     {

@@ -38,7 +38,7 @@
       }
 
       <p>@Model.MarkdownPiece("setupSectionHeader")</p>
-      
+
       @if (ViewBag.hasCloningDataNav){
       <p>@Model.MarkdownPiece("cloningSectionHeader")</p>
       <p>@Model.MarkdownPiece("cloningTutorial1")</p>
@@ -47,7 +47,6 @@
       <p>@Model.MarkdownPiece("cloningTutorial4")</p>
       <p>@Model.MarkdownPiece("cloningTutorial5")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>   
       }
 
       @if (ViewBag.hasAppSettings){
@@ -56,7 +55,6 @@
       <p>@Model.MarkdownPiece("appSettingsTutorial2")</p>
       <p>@Model.MarkdownPiece("appSettingsTutorial3")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
       @if (ViewBag.hasProtectingDataNav){
@@ -64,7 +62,6 @@
       <p>@Model.MarkdownPiece("protectionTutorial1")</p>
       <p>@Model.MarkdownPiece("protectionTutorial2")</p>  
       <p>@Model.MarkdownPiece("protectionTutorial3")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
@@ -101,7 +98,6 @@
       <p>@Model.MarkdownPiece("ApiCrudTutorial38")</p>
       <p>@Model.MarkdownPiece("ApiCrudTutorial39")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
       @if (ViewBag.hasPaginationSection){
@@ -113,17 +109,15 @@
       <p>@Model.MarkdownPiece("ApiCrudTutorial43")</p>
       <p>@Model.MarkdownPiece("ApiCrudTutorial44")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
       @if (ViewBag.hasDatabaseMigrations){
       <p>@Model.MarkdownPiece("DatabaseMigrationsHeader")</p>
+      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial1")</p>
       <p>@Model.MarkdownPiece("DatabaseMigrationTutorial2")</p>
       <p>@Model.MarkdownPiece("DatabaseMigrationTutorial6")</p>
       <p>@Model.MarkdownPiece("DatabaseMigrationTutorial10")</p>
       <p>@Model.MarkdownPiece("DatabaseMigrationTutorial14")</p>
-      <p>@Model.MarkdownPiece("DatabaseMigrationTutorial18")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
@@ -142,16 +136,38 @@
       @if (ViewBag.usesVscode){<p>@Model.MarkdownPiece("usesVscodeSnippet")</p>}
       @if (ViewBag.usesMysql){<p>@Model.MarkdownPiece("usesMysqlSnippet")</p>}
       <p>@Model.MarkdownPiece("lineBreak")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       
       @if (ViewBag.hasBugStatusNav){
       <p>@Model.MarkdownPiece("bugSectionHeader")</p>
       <br>
       <p>@Model.MarkdownPiece("bugOpen")@Model.MarkdownPiece("bugStatus")@Model.MarkdownPiece("bugMiddle")@Model.MarkdownPiece("bugDate")@Model.MarkdownPiece("bugClose")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+      
+      
+      <p>@Model.MarkdownPiece("installSectionHeader")</p>
+      
+      @if (ViewBag.hasNpmInstall){
+      <p>@Model.MarkdownPiece("hasNpmInstallHeader")</p>
+      <br>
+      <p>@Model.MarkdownPiece("npmInstallTutorial1")</p>
+      <p>@Model.MarkdownPiece("npmInstallTutorial2")</p>
+      <p>@Model.MarkdownPiece("npmInstallTutorial3")</p>
+      <p>@Model.MarkdownPiece("npmInstallTutorial4")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
       }
 
+      @if (ViewBag.hasDotnetInstall){
+      <p>@Model.MarkdownPiece("hasDotnetInstallHeader")</p>
+      <br>
+      <p>@Model.MarkdownPiece("DotnetInstallTutorial1")</p>
+      <p>@Model.MarkdownPiece("DotnetInstallTutorial2")</p>
+      <p>@Model.MarkdownPiece("DotnetInstallTutorial3")</p>
+      <p>@Model.MarkdownPiece("DotnetInstallTutorial4")</p>
+      <p>@Model.MarkdownPiece("DotnetInstallTutorial6")</p>
+      <p>@Model.MarkdownPiece("lineBreak")</p>
+      }
+      
       <p>@Model.MarkdownPiece("contributorsSectionHeader")</p>
       @if (ViewBag.hasAllisonSadin){<p>@Model.MarkdownPiece("contributorAllisonSadin")</p>}
       @if (ViewBag.hasBenWhite){<p>@Model.MarkdownPiece("contributorBenWhite")</p>}
@@ -191,9 +207,7 @@
       @if (ViewBag.hasTristanEmmerson){<p>@Model.MarkdownPiece("contributorTristanEmmerson")</p>}
       @if (ViewBag.hasTysonLackey){<p>@Model.MarkdownPiece("contributorTysonLackey")</p>}
       <p>@Model.MarkdownPiece("lineBreak")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>    
       <p>@Model.MarkdownPiece("keyword1") @Model.MarkdownPiece("keyword2") @Model.MarkdownPiece("keyword3") @Model.MarkdownPiece("keyword4") @Model.MarkdownPiece("keyword5") @Model.MarkdownPiece("keyword6")</p>
-      <p>@Model.MarkdownPiece("lineBreak")</p>
       <p>@Model.MarkdownPiece("lineBreak")</p>
       <p>@Model.MarkdownPiece("mitLicense1")</p>
       <p>@Model.MarkdownPiece("mitLicense2")</p>

@@ -5,10 +5,41 @@
 
   <div class="container">
     <form action="/readmeOneOutput" method="post">
+      <div class="row border">
+            <div class="col-md-4">
+            <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
+            <br>
+            </div>
+
+            <div class="col-md-4">
+            <div class="form-group">
+              <label for="bugDate">bug status date</label>
+              <input class="form-control" id="bugDate" name="bugDate" type="text">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="form-group">
+            <label for="bugStatus">bug status</label>
+            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
+          </div>
+          </div>
+          </div>
+
+
+              <div class="row border">
+            <div class="col-md-3">
+            <div class="form-group">
+            <span><input type="checkbox" name="hasNpmInstall" value="true"> : Npm install instructions?</span>
+            <br>
+            <span><input type="checkbox" name="hasDotnetInstall" value="true"> : Dotnet install instructions?</span>
+            <br>
+            </div>
+          </div>
+          </div>
+      
       <div class="row">
 
-        <div class="col-md-12">
-          <div class="center">
+          <div class="col-md-6">
           <div class="form-group">
             <label for="title">title</label>
             <input class="form-control" id="title" name="title" type="text">
@@ -25,9 +56,68 @@
             <label for="about">about section</label>
             <input class="form-control" id="about" name="about" type="text">
           </div>
-          </div>
-
+        </div>  
+        <div class="col-md-3">
           <div class="form-group">
+            <label for="keyword1">keyword-1</label>
+            <input class="form-control" id="keyword1" name="keyword1" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword2">keyword-2</label>
+            <input class="form-control" id="keyword2" name="keyword2" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword3">keyword-3</label>
+            <input class="form-control" id="keyword3" name="keyword3" type="text">
+          </div>
+    
+        </div>
+
+        <div class="col-md-3">
+        <div class="form-group">
+            <label for="keyword4">keyword-4</label>
+            <input class="form-control" id="keyword4" name="keyword4" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword5">keyword-5</label>
+            <input class="form-control" id="keyword5" name="keyword5" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword6">keyword-6</label>
+            <input class="form-control" id="keyword6" name="keyword6" type="text">
+          </div>
+        </div>
+
+
+
+
+ 
+
+
+
+
+
+</div>
+
+
+
+        
+        <div class="col-md-12">
+          <div class="col-md-4">
+          <div class="form-group">
+          <b>Requirements: </b><br />
+            <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
+            <br>
+            <span><input type="checkbox" name="requiresVscode" value="true"> : Vscode</span>
+            <br>
+            <span><input type="checkbox" name="requiresMysql" value="true"> : MySQL Workbench</span>
+            <br>
+            <span><input type="checkbox" name="requiresDotnetCore" value="true"> : .NET Core</span>
+            <br>
+        </div>   
+        </div>
+        <div class="col-md-8">
+                  <div class="form-group">
             <b>Technologies Used: </b><br />
             <span><input type="checkbox" name="usesPhotoshop" value="true"> : Photoshop</span>
             <br>
@@ -55,101 +145,12 @@
             <br>
             <span><input type="checkbox" name="usesJquery" value="true"> : Jquery</span>
           </div>
-        </div>
-
-        <div class="col-md-12">
-          <div class="form-group">
-            <h1>Topics (replace spaces with hyphens)</h1>
-            <label for="keyword1">keyword-1</label>
-            <input class="form-control" id="keyword1" name="keyword1" type="text">
           </div>
-          <div class="form-group">
-            <label for="keyword2">keyword-2</label>
-            <input class="form-control" id="keyword2" name="keyword2" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword3">keyword-3</label>
-            <input class="form-control" id="keyword3" name="keyword3" type="text">
-          </div>
-            <div class="form-group">
-            <label for="keyword4">keyword-4</label>
-            <input class="form-control" id="keyword4" name="keyword4" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword5">keyword-5</label>
-            <input class="form-control" id="keyword5" name="keyword5" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword6">keyword-6</label>
-            <input class="form-control" id="keyword6" name="keyword6" type="text">
-          </div>
-        </div>
-        
-        <div class="col-md-12">
-          <div class="form-group">
-          <b>Requirements: </b><br />
-            <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
-            <br>
-            <span><input type="checkbox" name="requiresVscode" value="true"> : Vscode</span>
-            <br>
-            <span><input type="checkbox" name="requiresMysql" value="true"> : MySQL Workbench</span>
-            <br>
-            <span><input type="checkbox" name="requiresDotnetCore" value="true"> : .NET Core</span>
-            <br>
-        </div>   
-
         </div>
         <div class="col-md-12">
           <div class="form-group">
             <b>Optional Setup Sections: </b><br />
             <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : Git ignore file handling?</span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-`           <div class="row border">
-            <div class="col-md-4">
-            <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
-            <br>
-            </div>
-
-            <div class="col-md-4">
-            <div class="form-group">
-              <label for="bugDate">bug status date</label>
-              <input class="form-control" id="bugDate" name="bugDate" type="text">
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="form-group">
-            <label for="bugStatus">bug status</label>
-            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
-          </div>
-          </div>
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <span><input type="checkbox" name="hasCloningDataNav" value="true"> : Add Cloning?</span>
             <br>

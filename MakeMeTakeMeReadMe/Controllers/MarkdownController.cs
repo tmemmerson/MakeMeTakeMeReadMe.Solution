@@ -12,11 +12,8 @@ namespace MakeMeTakeMeReadMe.Controllers
     [Route("/readmeOneInput")]
     public ActionResult ReadmeOneInput() { return View(); }
 
-    [Route("/readmeTwoInput")]
-    public ActionResult ReadmeTwoInput() { return View(); }
-
     [Route("/readmeOneOutput")]
-    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav, bool hasCloningDataNav, bool usesJquery, bool usesWebpack, bool usesNodeJs, bool usesHtml, bool usesAspDotnetMvc, bool usesSwagger, bool usesBootstrap, bool usesCss, bool usesJavascript, bool usesCsharp, bool hasSpecificationsDataNav, bool requiresPostman, bool requiresVscode, bool requiresMysql, bool requiresDotnetCore, bool hasAppSettings, bool hasDatabaseMigrations, bool hasApiCrudSection, bool hasPaginationSection)
+    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav, bool hasCloningDataNav, bool usesJquery, bool usesWebpack, bool usesNodeJs, bool usesHtml, bool usesAspDotnetMvc, bool usesSwagger, bool usesBootstrap, bool usesCss, bool usesJavascript, bool usesCsharp, bool hasSpecificationsDataNav, bool requiresPostman, bool requiresVscode, bool requiresMysql, bool requiresDotnetCore, bool hasAppSettings, bool hasDatabaseMigrations, bool hasApiCrudSection, bool hasPaginationSection, bool hasNpmInstall, bool hasDotnetInstall)
     {
       Markdown readmeText = new Markdown();
       
@@ -54,7 +51,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("bugDate", bugDate);
       readmeText.AddText("bugClose", "_");       
 
-      //REQUIREMENTS SECTION come back here this one isnt at all finished
+      //REQUIREMENTS SECTION
       readmeText.AddText("requirementSectionHeader", "# **REQUIREMENTS**");
       ViewBag.requiresPostman = requiresPostman;
       ViewBag.requiresVscode = requiresVscode;
@@ -64,11 +61,45 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("requiresVscode", "_[Visual Studio Code](https://code.visualstudio.com/)_");
       readmeText.AddText("requiresMysql", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
       readmeText.AddText("requiresDotnetCore", "_[.Net Core v2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)_");
-
+      
+      //OPTIONAL: SPECIFICATIONS SECTION
+      readmeText.AddText("specificationsSectionHeader", "# **SPECIFICATIONS**");
+      ViewBag.hasSpecificationsDataNav = hasSpecificationsDataNav;
+      readmeText.AddText("hasSpecificationsDataNav", " •<a href='#specifications'> Specs</a>"); 
+      
+      //TECHNOLOGIES USED
+      readmeText.AddText("technologiesSectionHeader", "# **TECHNOLOGIES USED**");
+      ViewBag.usesCss = usesCss;
+      ViewBag.usesJavascript = usesJavascript;
+      ViewBag.usesCsharp = usesCsharp;
+      ViewBag.usesBootstrap = usesBootstrap;
+      ViewBag.usesSwagger = usesSwagger;
+      ViewBag.usesAspDotnetMvc = usesAspDotnetMvc;
+      ViewBag.usesHtml = usesHtml;
+      ViewBag.usesPhotoshop = usesPhotoshop;
+      ViewBag.usesVscode = usesVscode;
+      ViewBag.usesMysql = usesMysql;
+      ViewBag.usesNodeJs = usesNodeJs;
+      ViewBag.usesWebpack = usesWebpack;
+      ViewBag.usesJquery = usesJquery;
+      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
+      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
+      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
+      readmeText.AddText("usesCssSnippet", "_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_");
+      readmeText.AddText("usesJavascriptSnippet", "_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_");
+      readmeText.AddText("usesCsharpSnippet", "_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_");
+      readmeText.AddText("usesBootstrapSnippet", "_[Bootstrap](https://getbootstrap.com/)_");
+      readmeText.AddText("usesSwaggerSnippet", "_[Swagger](https://swagger.io/)_");
+      readmeText.AddText("usesAspDotnetMvcSnippet", "_[Asp.Net MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)_");
+      readmeText.AddText("usesHtmlSnippet", "_[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)_");
+      readmeText.AddText("usesNodeJsSnippet", "_[Node.js](https://nodejs.org/en/)_");
+      readmeText.AddText("usesWebpackSnippet", "_[Webpack](https://webpack.js.org/)_");
+      readmeText.AddText("usesJquerySnippet", "_[Jquery](https://jquery.com/)_");
+      
       //SETUP OVER-ARCHING PARENT HEADER//
       readmeText.AddText("setupSectionHeader", "# **SETUP**");
 
-      //OPTIONAL: CLONING SECTION
+      //optional: CLONING SECTION
       readmeText.AddText("cloningSectionHeader", "## **CLONING**");
       ViewBag.hasCloningDataNav = hasCloningDataNav;
       readmeText.AddText("hasCloningDataNav", " •<a href='#cloning'> Cloning</a>");
@@ -78,20 +109,15 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("cloningTutorial4", "* You will be prompted to open the directory once you have cloned it. Select 'open'");
       readmeText.AddText("cloningTutorial5", "![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/clone-github2.gif 'Cloning from Github within VSCode')");
 
-      //OPTIONAL: PROTECTING DATA SECTION
+      //optional: PROTECTING DATA SECTION
       readmeText.AddText("protectionSectionHeader", "# **PROTECTING YOUR DATA**");
       ViewBag.hasProtectingDataNav = hasProtectingDataNav;
       readmeText.AddText("hasProtectingDataNav", " •<a href='#protecting-your-data'> Protecting Data</a>");
       readmeText.AddText("protectionTutorial1", "* Step 1: create a .gitignore file in the top level of your project directory. populate the file as shown in step 1 of the image below.");
       readmeText.AddText("protectionTutorial2", "* Step 2: commit that .gitignore file (this prevents your sensitive information like your API key being shown to others). **DO NOT PROCEED UNTIL YOU DO THIS!**");
       readmeText.AddText("protectionTutorial3", "![setup](https://coding-assets.s3-us-west-2.amazonaws.com/img/readme-image-3.jpg 'Set up instructions')");
-      
-      //OPTIONAL: SPECIFICATIONS SECTION
-      readmeText.AddText("specificationsSectionHeader", "# **SPECIFICATIONS**");
-      ViewBag.hasSpecificationsDataNav = hasSpecificationsDataNav;
-      readmeText.AddText("hasSpecificationsDataNav", " •<a href='#specifications'> Specs</a>");
 
-      //OPTIONAL: APP SETTINGS JSON
+      //optional: APP SETTINGS JSON
       readmeText.AddText("AppSettingsHeader", "# **APP SETTINGS**");
       ViewBag.hasAppSettings = hasAppSettings;
       readmeText.AddText("hasAppSettings", " •<a href='#app-settings'> AppSettings</a>");
@@ -99,19 +125,17 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("appSettingsTutorial2", "_By default these are set to user:root and an empty password. If you are unsure, refer to the settings for your MySqlWorkbench._");
       readmeText.AddText("appSettingsTutorial3", "![appsettings](https://coding-assets.s3-us-west-2.amazonaws.com/img/app-settings.png)");
 
-      //OPTIONAL: DATABASE WITH MIGRATIONS SECTION
+      //optional: DATABASE WITH MIGRATIONS SECTION
       readmeText.AddText("DatabaseMigrationsHeader", "# **DATABASE WITH MIGRATIONS**");
       ViewBag.hasDatabaseMigrations = hasDatabaseMigrations;
       readmeText.AddText("hasDatabaseMigrations", " •<a href='#database-with-migrations'> Database</a>");
-    
+      readmeText.AddText("DatabaseMigrationTutorial1", "with the root project folder open in your code editor, execute the following in your terminal:");
       readmeText.AddText("DatabaseMigrationTutorial2", "``cd ProjectName``");
       readmeText.AddText("DatabaseMigrationTutorial6", "``dotnet restore``");
       readmeText.AddText("DatabaseMigrationTutorial10", "``dotnet build``");
       readmeText.AddText("DatabaseMigrationTutorial14", "``dotnet ef database update``");
-      readmeText.AddText("DatabaseMigrationTutorial18", "``dotnet watch run``");
 
-
-      //OPTIONAL: API CRUD SECTION
+      //optional: API CRUD SECTION
       readmeText.AddText("ApiCrudHeader", "# **POSTMAN API REQUESTS**");
       ViewBag.hasApiCrudSection = hasApiCrudSection;
       readmeText.AddText("hasApiCrudSection", " •<a href='#postman-api-requests'> API</a>");
@@ -146,10 +170,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("ApiCrudTutorial38", "* Set your request to Delete");
       readmeText.AddText("ApiCrudTutorial39", "* Hit Send");
 
-      //LINE CARRIAGE
-      readmeText.AddText("lineBreak", "<br>");
-
-      //OPTIONAL: PAGINATION SECTION
+      //optional: PAGINATION SECTION
       readmeText.AddText("ApiCrudTutorial40", "# **USING PAGINATION**");
       ViewBag.hasPaginationSection = hasPaginationSection;
       readmeText.AddText("hasPaginationSection", " •<a href='#pagination'> Pagination</a>");
@@ -158,34 +179,35 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("ApiCrudTutorial43", "* http://localhost:5000/api/items/page?PageNumber=2&PageSize=5");
       readmeText.AddText("ApiCrudTutorial44", "<br>");
 
-      //OPTIONAL: TECHNOLOGIES USED
-      readmeText.AddText("technologiesSectionHeader", "# **TECHNOLOGIES USED**");
-      ViewBag.usesCss = usesCss;
-      ViewBag.usesJavascript = usesJavascript;
-      ViewBag.usesCsharp = usesCsharp;
-      ViewBag.usesBootstrap = usesBootstrap;
-      ViewBag.usesSwagger = usesSwagger;
-      ViewBag.usesAspDotnetMvc = usesAspDotnetMvc;
-      ViewBag.usesHtml = usesHtml;
-      ViewBag.usesPhotoshop = usesPhotoshop;
-      ViewBag.usesVscode = usesVscode;
-      ViewBag.usesMysql = usesMysql;
-      ViewBag.usesNodeJs = usesNodeJs;
-      ViewBag.usesWebpack = usesWebpack;
-      ViewBag.usesJquery = usesJquery;
-      readmeText.AddText("usesPhotoshopSnippet", "_[Adobe Photoshop](https://www.adobe.com/products/photoshop.html/)_");
-      readmeText.AddText("usesMysqlSnippet", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
-      readmeText.AddText("usesVscodeSnippet", "_[Visual Studio Code](https://code.visualstudio.com/)_");
-      readmeText.AddText("usesCssSnippet", "_[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)_");
-      readmeText.AddText("usesJavascriptSnippet", "_[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_");
-      readmeText.AddText("usesCsharpSnippet", "_[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_");
-      readmeText.AddText("usesBootstrapSnippet", "_[Bootstrap](https://getbootstrap.com/)_");
-      readmeText.AddText("usesSwaggerSnippet", "_[Swagger](https://swagger.io/)_");
-      readmeText.AddText("usesAspDotnetMvcSnippet", "_[Asp.Net MVC](https://dotnet.microsoft.com/apps/aspnet/mvc)_");
-      readmeText.AddText("usesHtmlSnippet", "_[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)_");
-      readmeText.AddText("usesNodeJsSnippet", "_[Node.js](https://nodejs.org/en/)_");
-      readmeText.AddText("usesWebpackSnippet", "_[Webpack](https://webpack.js.org/)_");
-      readmeText.AddText("usesJquerySnippet", "_[Jquery](https://jquery.com/)_");
+
+      //LINE CARRIAGE//
+      readmeText.AddText("lineBreak", "<br>");
+
+
+      //MIDPOINT--------->SPLIT
+
+      //INSTALL OVER-ARCHING PARENT HEADER//
+      readmeText.AddText("installSectionHeader", "# **INSTALL**");
+
+      //optional: NpmInstall SECTION
+      readmeText.AddText("hasNpmInstallHeader", "## **INSTALLING WITH NODE**");
+      ViewBag.hasNpmInstall = hasNpmInstall;
+      readmeText.AddText("npmInstallTutorial1", "with the root project folder open in your code editor, execute the following in your terminal:");
+      readmeText.AddText("npmInstallTutorial2", "``cd ProjectName``");
+      readmeText.AddText("npmInstallTutorial3", "``npm install``");
+      readmeText.AddText("npmInstallTutorial4", "``npm run build``");
+
+
+      //optional: DATABASE WITH MIGRATIONS SECTION
+      readmeText.AddText("hasDotnetInstallHeader", "## **INSTALLING WITH DOTNET**");
+      ViewBag.hasDotnetInstall = hasDotnetInstall;
+      readmeText.AddText("DotnetInstallTutorial1", "with the root project folder open in your code editor, execute the following in your terminal:");
+      readmeText.AddText("DotnetInstallTutorial2", "``cd ProjectName``");
+      readmeText.AddText("DotnetInstallTutorial3", "``dotnet restore``");
+      readmeText.AddText("DotnetInstallTutorial4", "``dotnet build``");
+      readmeText.AddText("DotnetInstallTutorial6", "``dotnet watch run``");
+
+
 
       //CONTRIBUTORS
       readmeText.AddText("contributorsSectionHeader", "# **❤️Contributors**");
