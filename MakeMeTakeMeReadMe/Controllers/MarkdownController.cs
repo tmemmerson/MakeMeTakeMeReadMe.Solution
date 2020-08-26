@@ -40,7 +40,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("aboutOpen", "<h3 align='center'>" );
       readmeText.AddText("about", about);
       readmeText.AddText("aboutClose", "</h3>");      
-    
+   
       //OPTIONAL: BUG SECTION
       ViewBag.hasBugStatusNav = hasBugStatusNav;
       readmeText.AddText("hasBugStatusNav", " •<a href='#known-bugs'> Bugs</a>");
@@ -50,7 +50,7 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("bugMiddle", " as of:** ");
       readmeText.AddText("bugDate", bugDate);
       readmeText.AddText("bugClose", "_");       
-
+     
       //REQUIREMENTS SECTION
       readmeText.AddText("requirementSectionHeader", "# **REQUIREMENTS**");
       ViewBag.requiresPostman = requiresPostman;

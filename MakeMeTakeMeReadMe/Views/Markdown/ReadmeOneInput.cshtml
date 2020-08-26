@@ -17,7 +17,7 @@
               <input class="form-control" id="bugDate" name="bugDate" type="text">
             </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
             <div class="form-group">
             <label for="bugStatus">bug status</label>
             <input class="form-control" id="bugStatus" name="bugStatus" type="text">
@@ -26,38 +26,44 @@
           </div>
 
 
-              <div class="row border">
-            <div class="col-md-3">
+            <div class="row border">
+            <div class="col-md-6">
             <div class="form-group">
+            <b>Install Type: </b><br />
             <span><input type="checkbox" name="hasNpmInstall" value="true"> : Npm install instructions?</span>
             <br>
             <span><input type="checkbox" name="hasDotnetInstall" value="true"> : Dotnet install instructions?</span>
             <br>
             </div>
-          </div>
-          </div>
-      
-      <div class="row">
+            
+
 
           <div class="col-md-6">
           <div class="form-group">
-            <label for="title">title</label>
-            <input class="form-control" id="title" name="title" type="text">
+            <b>Optional Setup Sections: </b><br />
+            <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : .gitignore file handling</span>
+
+            <span><input type="checkbox" name="hasCloningDataNav" value="true"> : how to clone a repo</span>
+            
+            <span><input type="checkbox" name="hasAppSettings" value="true"> : appsettings.json section</span>
+            
+            <span><input type="checkbox" name="hasDatabaseMigrations" value="true"> : installing db via migrations</span>
+            
+            <span><input type="checkbox" name="hasApiCrudSection" value="true"> : Postman api CRUD requests</span>
+            
+            <span><input type="checkbox" name="hasSpecificationsDataNav" value="true"> : specifications section</span>
+            
+            <span><input type="checkbox" name="hasPaginationSection" value="true"> : pagination with api</span>
           </div>
-          <div class="form-group">
-            <label for="tagline">tagline</label>
-            <input class="form-control" id="tagline" name="tagline" type="text">
+        </div>
+
+
+
+
+
+
           </div>
-            <div class="form-group">
-            <label for="heroURL">hero url (see documentation for stocks)</label>
-            <input class="form-control" id="heroURL" name="heroURL" type="text">
-          </div>
-          <div class="form-group">
-            <label for="about">about section</label>
-            <input class="form-control" id="about" name="about" type="text">
-          </div>
-        </div>  
-        <div class="col-md-3">
+          <div class="col-md-3">
           <div class="form-group">
             <label for="keyword1">keyword-1</label>
             <input class="form-control" id="keyword1" name="keyword1" type="text">
@@ -89,36 +95,30 @@
         </div>
 
 
+          </div>
+      
+      <div class="row border">
 
-
- 
-
-
-
-
-
-</div>
-
-
-
-        
-        <div class="col-md-12">
-          <div class="col-md-4">
+          <div class="col-md-6">
           <div class="form-group">
-          <b>Requirements: </b><br />
-            <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
-            <br>
-            <span><input type="checkbox" name="requiresVscode" value="true"> : Vscode</span>
-            <br>
-            <span><input type="checkbox" name="requiresMysql" value="true"> : MySQL Workbench</span>
-            <br>
-            <span><input type="checkbox" name="requiresDotnetCore" value="true"> : .NET Core</span>
-            <br>
-            <span><input type="checkbox" name="requiresNodeJs" value="true"> : Node.js</span>
-            <br>
-        </div>   
-        </div>
-        <div class="col-md-8">
+            <label for="title">title</label>
+            <input class="form-control" id="title" name="title" type="text">
+          </div>
+          <div class="form-group">
+            <label for="tagline">tagline</label>
+            <input class="form-control" id="tagline" name="tagline" type="text">
+          </div>
+            <div class="form-group">
+            <label for="heroURL">hero url (see documentation for stocks)</label>
+            <input class="form-control" id="heroURL" name="heroURL" type="text">
+          </div>
+          <div class="form-group">
+            <label for="about">about section</label>
+            <input class="form-control" id="about" name="about" type="text">
+          </div>
+        </div>  
+       
+        <div class="col-md-3">
                   <div class="form-group">
             <b>Technologies Used: </b><br />
             <span><input type="checkbox" name="usesPhotoshop" value="true"> : Photoshop</span>
@@ -148,29 +148,42 @@
             <span><input type="checkbox" name="usesJquery" value="true"> : Jquery</span>
           </div>
           </div>
-        </div>
-        <div class="col-md-12">
+
+          
+       <div class="col-md-3">
           <div class="form-group">
-            <b>Optional Setup Sections: </b><br />
-            <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : Git ignore file handling?</span>
-
-            <span><input type="checkbox" name="hasCloningDataNav" value="true"> : Add Cloning?</span>
+          <b>Requirements: </b><br />
+            <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
             <br>
-            <span><input type="checkbox" name="hasAppSettings" value="true"> : Add AppSettings.json section?</span>
+            <span><input type="checkbox" name="requiresVscode" value="true"> : Vscode</span>
             <br>
-            <span><input type="checkbox" name="hasDatabaseMigrations" value="true"> : Database with Migrations?</span>
+            <span><input type="checkbox" name="requiresMysql" value="true"> : MySQL</span>
             <br>
-            <span><input type="checkbox" name="hasApiCrudSection" value="true"> : Postman API CRUD Requests?</span>
+            <span><input type="checkbox" name="requiresDotnetCore" value="true"> : .NET Core</span>
             <br>
-            <span><input type="checkbox" name="hasSpecificationsDataNav" value="true"> : Add Specifications section?</span>
+            <span><input type="checkbox" name="requiresNodeJs" value="true"> : Node.js</span>
             <br>
-            <span><input type="checkbox" name="hasPaginationSection" value="true"> : Add Pagination section?</span>
-          </div>
-
-
-    
-
+        </div>   
         </div>
+       
+       
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      
+       
+        
 
 
         <div class="row border">
