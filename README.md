@@ -5,8 +5,29 @@
   <img width="900" height="450" src="https://coding-assets.s3-us-west-2.amazonaws.com/hero_images/makemetakemereadme1.jpg">
 
   
-**<h1 align = "center">MakeMeTakeMeReadMe**
+**<h1 align = "center">MakeMeTakeMeReadMe**</h1>
 
+# **Setup/Install**
+
+with the root project folder open in your code editor, execute the following in your terminal.
+
+``
+cd projectdirectory
+``
+
+``
+dotnet restore
+``
+
+``
+dotnet build
+``
+
+``
+dotnet watch run
+``
+
+open your browser and navigate to "localhost: 5000"
 
 
 ABOUT
