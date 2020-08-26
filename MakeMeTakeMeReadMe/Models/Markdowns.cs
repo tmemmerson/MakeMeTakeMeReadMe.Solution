@@ -64,7 +64,7 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasBugStatusNav { get; set; }
     public bool hasSpecificationsDataNav { get; set; }   
     public bool hasProtectingDataNav { get; set; }
-    public bool hasCloningDataNav { get; set; } 
+    public bool hasCloningDataNav { get; set; }
     public bool hasAppSettings { get; set; }
     public bool hasDatabaseMigrations { get; set; } 
     public bool hasApiCrudSection { get; set; }
@@ -73,6 +73,7 @@ namespace MakeMeTakeMeReadMe.Models
     public bool requiresVscode { get; set; }
     public bool requiresMysql { get; set; } 
     public bool requiresDotnetCore { get; set; }
+    public bool requiresNodeJs { get; set; }
     public bool hasNpmInstall { get; set; }
     public bool hasDotnetInstall { get; set; }
   

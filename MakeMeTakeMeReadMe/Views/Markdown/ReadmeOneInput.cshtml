@@ -1,12 +1,12 @@
 @{
   Layout = "_Layout";
-}
+} 
 @model MakeMeTakeMeReadMe.Models.Markdown
 
   <div class="container">
     <form action="/readmeOneOutput" method="post">
       <div class="row border">
-            <div class="col-md-4">
+            <div class="col-md-3">
             <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
             <br>
             </div>
@@ -113,6 +113,8 @@
             <span><input type="checkbox" name="requiresMysql" value="true"> : MySQL Workbench</span>
             <br>
             <span><input type="checkbox" name="requiresDotnetCore" value="true"> : .NET Core</span>
+            <br>
+            <span><input type="checkbox" name="requiresNodeJs" value="true"> : Node.js</span>
             <br>
         </div>   
         </div>

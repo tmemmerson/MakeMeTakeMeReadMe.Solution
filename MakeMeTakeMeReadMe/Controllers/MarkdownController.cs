@@ -13,7 +13,7 @@ namespace MakeMeTakeMeReadMe.Controllers
     public ActionResult ReadmeOneInput() { return View(); }
 
     [Route("/readmeOneOutput")]
-    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav, bool hasCloningDataNav, bool usesJquery, bool usesWebpack, bool usesNodeJs, bool usesHtml, bool usesAspDotnetMvc, bool usesSwagger, bool usesBootstrap, bool usesCss, bool usesJavascript, bool usesCsharp, bool hasSpecificationsDataNav, bool requiresPostman, bool requiresVscode, bool requiresMysql, bool requiresDotnetCore, bool hasAppSettings, bool hasDatabaseMigrations, bool hasApiCrudSection, bool hasPaginationSection, bool hasNpmInstall, bool hasDotnetInstall)
+    public ActionResult ReadmeOneOutput(string title, string tagline, string about, string keyword1, string keyword2, string keyword3, string keyword4, string keyword5, string keyword6, string heroURL, string bugStatus, string bugDate, bool usesPhotoshop, bool usesVscode, bool usesMysql, bool hasAllisonSadin, bool hasBenWhite, bool hasBenRussell, bool hasBeverlyPotts, bool hasBrittanyLindgren, bool hasChristineAugustine, bool hasChrisYoon, bool hasCodyFritz, bool hasDeryckJackson, bool hasErichRichter, bool hasEvgeniyaChernaya, bool hasFrederickErnest, bool hasHannahBeinstein, bool hasIanGregg, bool hasIanScott, bool hasJamesHenager, bool hasJasonKhan, bool hasJeffreyKim, bool hasJohnNilsOlson, bool hasJosephPearce, bool hasKateSkorija, bool hasKevinDavis, bool hasKyleHubbard, bool hasMarielHamson, bool hasMeganHepner, bool hasMichealHansen, bool hasNoelKirkland, bool hasPeterGrimm, bool hasSaraKane, bool hasSeanDowns, bool hasSpencerMoody, bool hasTaylorPhillips, bool hasTaylorSomers, bool hasTeresaRosinksi, bool hasThomasGlenn, bool hasTristanEmmerson, bool hasTysonLackey, bool hasBugStatusNav, bool hasProtectingDataNav, bool hasCloningDataNav, bool usesJquery, bool usesWebpack, bool usesNodeJs, bool usesHtml, bool usesAspDotnetMvc, bool usesSwagger, bool usesBootstrap, bool usesCss, bool usesJavascript, bool usesCsharp, bool hasSpecificationsDataNav, bool requiresPostman, bool requiresVscode, bool requiresMysql, bool requiresDotnetCore, bool hasAppSettings, bool hasDatabaseMigrations, bool hasApiCrudSection, bool hasPaginationSection, bool hasNpmInstall, bool hasDotnetInstall, bool requiresNodeJs)
     {
       Markdown readmeText = new Markdown();
       
@@ -57,11 +57,13 @@ namespace MakeMeTakeMeReadMe.Controllers
       ViewBag.requiresVscode = requiresVscode;
       ViewBag.requiresMysql = requiresMysql;
       ViewBag.requiresDotnetCore = requiresDotnetCore;
+      ViewBag.requiresNodeJs = requiresNodeJs;
       readmeText.AddText("requiresPostman", "_[Postman](https://www.postman.com/)_");
       readmeText.AddText("requiresVscode", "_[Visual Studio Code](https://code.visualstudio.com/)_");
       readmeText.AddText("requiresMysql", "_[MySql Workbench](https://www.mysql.com/products/workbench/)_");
       readmeText.AddText("requiresDotnetCore", "_[.Net Core v2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)_");
-      
+      readmeText.AddText("requiresNodeJs", "_[Node.js](https://nodejs.org/en/)_");
+
       //OPTIONAL: SPECIFICATIONS SECTION
       readmeText.AddText("specificationsSectionHeader", "# **SPECIFICATIONS**");
       ViewBag.hasSpecificationsDataNav = hasSpecificationsDataNav;
@@ -178,7 +180,6 @@ namespace MakeMeTakeMeReadMe.Controllers
       readmeText.AddText("ApiCrudTutorial42", "* adjust the PageNumber and PageSize values in your request to do so");
       readmeText.AddText("ApiCrudTutorial43", "* http://localhost:5000/api/items/page?PageNumber=2&PageSize=5");
       readmeText.AddText("ApiCrudTutorial44", "<br>");
-
 
       //LINE CARRIAGE//
       readmeText.AddText("lineBreak", "<br>");

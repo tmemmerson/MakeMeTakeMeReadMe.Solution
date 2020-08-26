@@ -36,6 +36,9 @@
       @if (ViewBag.requiresDotnetCore){
         <p>@Model.MarkdownPiece("requiresDotnetCore")</p>
       }
+      @if (ViewBag.requiresNodeJs){
+        <p>@Model.MarkdownPiece("requiresNodeJs")</p>
+      }
 
       <p>@Model.MarkdownPiece("setupSectionHeader")</p>
 
