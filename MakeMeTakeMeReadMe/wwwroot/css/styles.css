@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://coding-assets.s3-us-west-2.amazonaws.com/MakeMeTakeMeReadMe4.jpg");
+  background-image: url("https://coding-assets.s3-us-west-2.amazonaws.com/backgrounds/mmtmrm-bg2.jpg");
   background-blend-mode: multiply;
   background-color: #3D3A39;
   background-position: center;
@@ -58,7 +58,7 @@ div#footer {
   bottom:0px;
   left:0px;
   width:100%;
-  background:rgba(193, 115, 127, 0.85);
+  background:rgba(193, 115, 174, 0.85);
   padding:8px;
   text-align: center;
   font-family: 'Fredoka One', cursive;
@@ -80,7 +80,7 @@ div#footer {
 
 .jumbotron {
   text-align: center;
-  background-color: rgba(193, 115, 127, 0.85);
+  background-color: rgba(145, 94, 192, 0.85);
 }
 
 .border {
