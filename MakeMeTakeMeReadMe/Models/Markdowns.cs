@@ -69,14 +69,14 @@ namespace MakeMeTakeMeReadMe.Models
     public bool hasDatabaseMigrations { get; set; } 
     public bool hasApiCrudSection { get; set; }
     public bool hasPaginationSection { get; set; } 
-    public bool requiresPostman { get; set; } 
+    public bool requiresPostman { get; set; }
     public bool requiresVscode { get; set; }
     public bool requiresMysql { get; set; } 
     public bool requiresDotnetCore { get; set; }
     public bool requiresNodeJs { get; set; }
     public bool hasNpmInstall { get; set; }
     public bool hasDotnetInstall { get; set; }
-  
+
     public string MarkdownPiece(string key)
     {
       if (_markdownSnippetList.ContainsKey(key))
