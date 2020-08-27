@@ -5,8 +5,8 @@ namespace MakeMeTakeMeReadMe.Models
 {
   public class Markdown
   {
+    
     private Dictionary<string, string> _markdownSnippetList = new Dictionary<string, string>();
-
     public bool hasAllisonSadin { get; set; }
     public bool hasBenWhite { get; set; }
     public bool hasBenRussell { get; set; }

@@ -6,97 +6,7 @@
   <div class="container">
     <form action="/readmeOneOutput" method="post">
       <div class="row border">
-            <div class="col-md-3">
-            <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
-            <br>
-            </div>
-
-            <div class="col-md-4">
-            <div class="form-group">
-              <label for="bugDate">bug status date</label>
-              <input class="form-control" id="bugDate" name="bugDate" type="text">
-            </div>
-            </div>
-            <div class="col-md-5">
-            <div class="form-group">
-            <label for="bugStatus">bug status</label>
-            <input class="form-control" id="bugStatus" name="bugStatus" type="text">
-          </div>
-          </div>
-          </div>
-
-
-            <div class="row border">
-            <div class="col-md-6">
-            <div class="form-group">
-            <b>Install Type: </b><br />
-            <span><input type="checkbox" name="hasNpmInstall" value="true"> : Npm install instructions?</span>
-            <br>
-            <span><input type="checkbox" name="hasDotnetInstall" value="true"> : Dotnet install instructions?</span>
-            <br>
-            </div>
-            
-
-
-          <div class="col-md-6">
-          <div class="form-group">
-            <b>Optional Setup Sections: </b><br />
-            <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : .gitignore file handling</span>
-
-            <span><input type="checkbox" name="hasCloningDataNav" value="true"> : how to clone a repo</span>
-            
-            <span><input type="checkbox" name="hasAppSettings" value="true"> : appsettings.json section</span>
-            
-            <span><input type="checkbox" name="hasDatabaseMigrations" value="true"> : installing db via migrations</span>
-            
-            <span><input type="checkbox" name="hasApiCrudSection" value="true"> : Postman api CRUD requests</span>
-            
-            <span><input type="checkbox" name="hasSpecificationsDataNav" value="true"> : specifications section</span>
-            
-            <span><input type="checkbox" name="hasPaginationSection" value="true"> : pagination with api</span>
-          </div>
-          </div>
-
-
-
-
-
-
-          </div>
-          <div class="col-md-3">
-          <div class="form-group">
-            <label for="keyword1">tag 1</label>
-            <input class="form-control" id="keyword1" name="keyword1" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword2">tag 2</label>
-            <input class="form-control" id="keyword2" name="keyword2" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword3">tag 3</label>
-            <input class="form-control" id="keyword3" name="keyword3" type="text">
-          </div>
-        </div>
-
-        <div class="col-md-3">
-        <div class="form-group">
-            <label for="keyword4">tag 4</label>
-            <input class="form-control" id="keyword4" name="keyword4" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword5">tag 5</label>
-            <input class="form-control" id="keyword5" name="keyword5" type="text">
-          </div>
-          <div class="form-group">
-            <label for="keyword6">tag 6</label>
-            <input class="form-control" id="keyword6" name="keyword6" type="text">
-          </div>
-        </div>
-          </div>
-      
-
-      <div class="row border">
-          <div class="col-md-6">
+        <div class="col-md-6">
           <div class="form-group">
             <label for="title">title</label>
             <input class="form-control" id="title" name="title" type="text">
@@ -105,7 +15,7 @@
             <label for="tagline">tagline</label>
             <input class="form-control" id="tagline" name="tagline" type="text">
           </div>
-            <div class="form-group">
+          <div class="form-group">
             <label for="heroURL">hero url (see documentation for stocks)</label>
             <input class="form-control" id="heroURL" name="heroURL" type="text">
           </div>
@@ -114,9 +24,9 @@
             <input class="form-control" id="about" name="about" type="text">
           </div>
         </div>  
-      
+  
         <div class="col-md-3">
-                  <div class="form-group">
+          <div class="form-group">
             <b>Technologies Used: </b><br />
             <span><input type="checkbox" name="usesPhotoshop" value="true"> : Photoshop</span>
             <br>
@@ -144,12 +54,11 @@
             <br>
             <span><input type="checkbox" name="usesJquery" value="true"> : Jquery</span>
           </div>
-          </div>
+        </div>
 
-
-       <div class="col-md-3">
+        <div class="col-md-3">
           <div class="form-group">
-          <b>Requirements: </b><br />
+            <b>Requirements: </b><br />
             <span><input type="checkbox" name="requiresPostman" value="true"> : Postman</span>
             <br>
             <span><input type="checkbox" name="requiresVscode" value="true"> : Vscode</span>
@@ -160,30 +69,89 @@
             <br>
             <span><input type="checkbox" name="requiresNodeJs" value="true"> : Node.js</span>
             <br>
-        </div>   
+          </div>   
         </div>
-       
-       
-       </div>
+      </div>
 
+      <div class="row border">
 
+        <div class="col-md-6">
+          <div class="form-group">
+            <b>Install Type: </b><br />
+            <span><input type="checkbox" name="hasNpmInstall" value="true"> : Npm install?</span>
+            <br>
+            <span><input type="checkbox" name="hasDotnetInstall" value="true"> : Dotnet install?</span>
+            <br>
+          </div>
+          <div class="form-group">
+            <b>Optional Sections: </b><br />
+            <span><input type="checkbox" name="hasProtectingDataNav" value="true"> : .gitignore file handling</span>
+            <br>
+            <span><input type="checkbox" name="hasCloningDataNav" value="true"> : how to clone a repo</span>
+            <br>
+            <span><input type="checkbox" name="hasAppSettings" value="true"> : appsettings.json help</span>
+            <br>
+            <span><input type="checkbox" name="hasDatabaseMigrations" value="true"> : install db via migrations</span>
+            <br>
+            <span><input type="checkbox" name="hasApiCrudSection" value="true"> : Postman api CRUD requests</span>
+            <br>
+            <span><input type="checkbox" name="hasSpecificationsDataNav" value="true"> : has specifications</span>
+            <br>
+            <span><input type="checkbox" name="hasPaginationSection" value="true"> : pagination with api</span>
+            <br>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="keyword1">tag 1</label>
+            <input class="form-control" id="keyword1" name="keyword1" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword2">tag 2</label>
+            <input class="form-control" id="keyword2" name="keyword2" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword3">tag 3</label>
+            <input class="form-control" id="keyword3" name="keyword3" type="text">
+          </div>
+        </div>
 
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="keyword4">tag 4</label>
+            <input class="form-control" id="keyword4" name="keyword4" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword5">tag 5</label>
+            <input class="form-control" id="keyword5" name="keyword5" type="text">
+          </div>
+          <div class="form-group">
+            <label for="keyword6">tag 6</label>
+            <input class="form-control" id="keyword6" name="keyword6" type="text">
+          </div>
+        </div>
+      </div>
 
-
-
-
-
-
-
-
-
-        
+      <div class="row border">
+        <div class="col-md-3">
+          <span><input type="checkbox" name="hasBugStatusNav" value="true"> : Add Bug Status?</span>
+          <br>
+        </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="bugStatus">comments</label>
+          <input class="form-control" id="bugStatus" name="bugStatus" type="text">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="bugDate">date</label>
+          <input class="form-control" id="bugDate" name="bugDate" type="text">
+        </div>
+      </div>
+      </div>
       
-       
-        
-
-
-        <div class="row border">
+      <div class="row border">
         <div class="col-md-4">
           <div class="form-group">
             <b>Contributors: </b><br />
@@ -213,9 +181,9 @@
             <br>
           </div>
         </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <br>
+        <div class="col-md-4">
+          <div class="form-group">
+            <br>
             <span><input type="checkbox" name="hasHannahBeinstein" value="true"> : Hannah Beinstein
             <br>
             <span><input type="checkbox" name="hasIanGregg" value="true"> : Ian Gregg
@@ -242,9 +210,9 @@
             <br>
           </div>
         </div>
-          <div class="col-md-4">
-            <div class="form-group">
-              <br>
+        <div class="col-md-4">
+          <div class="form-group">
+            <br>
             <span><input type="checkbox" name="hasMeganHepner" value="true"> : Megan Hepner
             <br>
             <span><input type="checkbox" name="hasMichealHansen" value="true"> : Micheal Hansen
@@ -272,18 +240,17 @@
             <span><input type="checkbox" name="hasTysonLackey" value="true"> : Tyson Lackey   
           </div>
         </div>
-        </div>
-      </div>
-
       </div>
       <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-12">
           <div class="form-group">
-            <button type="submit" class="btn btn-info">MakeMeTakeMeReadMe</button>
+            <button type="submit" class="btn btn-info">Make</button>
           </div>
         </div>
       </div>
-    </form>
-  </div>
+      </form>
+      </div>
+
+
 
 
